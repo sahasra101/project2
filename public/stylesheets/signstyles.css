@@ -1,0 +1,57 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Gupter', serif;
+}
+
+form.signup,
+form.login {
+  margin-top: 50px;
+}
+
+#css-grid {
+  display: grid;
+  grid-template-columns: 1.5fr 4fr;
+  grid-template-rows: 1fr 1fr;
+}
+
+#picture-sidebar {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 1;
+  grid-row-end: 3;
+  background-image: url("/img/sign_n_log.jpg");
+  background-size: cover;
+  background-position-x: 40%;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 500px;
+}
+
+#form-div {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  margin-left: 20px;
+  margin-top: 50px;
+}
+
+label {
+  display: block;
+  margin-bottom: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+input {
+  margin-bottom: 12px;
+  padding: 6px;
+}
+
+#submit {
+  padding: 6px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
