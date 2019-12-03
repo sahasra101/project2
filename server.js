@@ -1,6 +1,6 @@
 require("dotenv").config();
 var express = require("express");
-var bodyParser = require("body-parser");
+// var bodyParser = require("body-parser");
 var session = require("express-session");
 var passport = require("./config/passport");
 
@@ -28,7 +28,6 @@ app.use(
 );
 app.use(passport.initialize());
 app.use(passport.session());
-
 
 // Routes
 require("./routes/apiRoutes")(app);
