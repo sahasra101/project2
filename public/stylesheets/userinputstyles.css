@@ -9,7 +9,7 @@ body {
 
 #css-grid {
   display: grid;
-  grid-template-rows: 2fr 4fr 1fr;
+  grid-template-rows: 2fr .4fr .1fr;
   grid-template-columns: 1fr 1fr;
 }
 
@@ -51,6 +51,12 @@ header {
   letter-spacing: 1.4px;
 }
 
+#home-link {
+  text-decoration: none;
+  color: rgb(97, 97, 245);
+  letter-spacing: 1.4px;
+}
+
 #right-nav {
   grid-column-start: 3;
   grid-column-end: 4;
@@ -60,13 +66,13 @@ header {
 }
 
 #all-results-content {
-  grid-row-start: 1;
-  grid-row-end: 2;
+  grid-row-start: 2;
+  grid-row-end: 3;
   grid-column-start: 1;
   grid-column-end: 2;
   padding: 15px;
   display: grid;
-  grid-template-rows: 1fr 2fr;
+  grid-template-rows: .2fr 1fr;
 }
 
 #result-heading-container {
@@ -88,13 +94,14 @@ header {
 }
 
 #all-form-content {
-  grid-row-start: 2;
-  grid-row-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 2;
   grid-column-start: 1;
   grid-column-end: 2;
   padding: 15px;
   display: grid;
-  grid-template-rows: .5fr 4fr;
+  grid-template-rows: .3fr 4fr;
+  margin-top: 12px;
 }
 
 #property-details-heading-container {
@@ -139,5 +146,47 @@ label {
 #zillow-and-map-container {
   grid-row-start: 1;
   grid-row-end: 3;
+  grid-column-start: 2;
+  grid-column-end: 3;
+}
+
+#zillow-api {
+  padding: 15px;
+  display: grid;
+  grid-template-rows: .3fr 4fr;
+  margin-top: 12px;
+}
+
+#zillow-heading-container {
+  grid-row-start: 1;
+  grid-row-end: 2;  
+  justify-self: center;
+  color: rgb(97, 97, 245);
+}
+
+#zillow-display {
+  grid-row-start: 2;
+  grid-row-end: 3;
+}
+
+#map-container {
+  padding: 15px;
+  display: grid;
+  grid-template-rows: .3fr 4fr;
+  margin-top: 12px;
+}
+
+#map-heading-container {
+  grid-row-start: 1;
+  grid-row-end: 2;  
+  justify-self: center;
+  color: rgb(97, 97, 245);
+}
+
+#map {
+  grid-row-start: 2;
+  grid-row-end: 3;
+  height: 100%;
+  width: auto;
 }
 
