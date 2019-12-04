@@ -26,12 +26,19 @@ var yearOneCost = 0;
 var yearOneYield = 0;
 // I want to convert this number to a two decimal percentage.
 var yieldToFixed = 0;
+// We also need to get the user address!
+// var address = "";
 
 $(document).ready(function() {
   //   Initial variables
 
   $("#submit").on("click", function(event) {
     event.preventDefault();
+
+    address = $("#address")
+      .val()
+      .trim();
+    console.log("Address: " + address);
 
     purchasePrice = $("#purchasePrice")
       .val()
@@ -108,7 +115,37 @@ $(document).ready(function() {
     // Want to convert the number to only include two decimals.
     yieldToFixed = yearOneYield.toFixed(2);
 
-    $(".results").text("Purchase Price: " + purchasePrice);
-    $(".results").append("Yield: " + yieldToFixed + "%");
+    var resultsTable = $("<table class='table'>");
+    var resultsHead = $("<thead>");
+    var resultsTR = $("<tr>");
+    var resultsTH = $("<th scope='col'>Address</th>");
+    var resultsTH2 = $("<th scope='col'>Initial Investment</th>");
+    var resultsTH3 = $("<th scope='col'>Year One Return</th>");
+    var resultsTH4 = $("<th scope='col'>Yield</th>");
+
+    resultsTR.append(resultsTH, resultsTH2, resultsTH3, resultsTH4);
+    resultsHead.append(resultsTR);
+    resultsTable.append(resultsHead);
+
+    var tBody = $("<tbody>");
+    var tRow = $("<tr>");
+    var td = $("<td>" + address + "</td>");
+    var td2 = $("<td>" + "$" + yearOneCost + "</td>");
+    var td3 = $("<td>" + "$" + netRentToFixed + "</td>");
+    var td4 = $("<td>" + yieldToFixed + "%" + "</td>");
+
+    tRow.append(td, td2, td3, td4);
+    tBody.append(tRow);
+    resultsTable.append(tBody);
+
+    var buttonRow = $("<tr>");
+    var button = $(
+      "<button type='button' class='btn btn-primary' id='saveSearch'> Save Search </button>"
+    );
+
+    buttonRow.append(button);
+    resultsTable.append(buttonRow);
+
+    $(".results").append(resultsTable);
   });
 });
