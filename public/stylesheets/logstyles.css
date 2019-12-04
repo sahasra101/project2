@@ -16,7 +16,7 @@ form.login {
   display: grid;
   grid-template-columns: 1.5fr 4fr;
   grid-template-rows: 1fr 1fr;
-  height: 50px;
+  height: 70px;
 }
 
 #picture-sidebar {
