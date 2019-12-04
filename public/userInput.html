@@ -24,7 +24,7 @@
             <a class="nav-link" href="#">My Properties</a>
         </span>
 
-        <span id="center-logo">Rentable</span>
+        <span id="center-logo"><a id="home-link" href="/">Rentable</a></span>
 
         <span id="right-nav">
             <a class="nav-link" href="/logout">Logout</a>
@@ -39,7 +39,6 @@
                 <h2 id="res-head"></i>Results</h2>
             </span>
             <div class="results"></div>
-            <hr>
         </div>
 
 
@@ -113,23 +112,31 @@
                 </form>
             </div>
         </div>
-    </div>
+    
 
 
 
 
     <div id="zillow-and-map-container">
         <div id="zillow-api">
+             
+            <span id="zillow-heading-container">
+                <h2 id="zillow-head">Zillow Search Results</h2>
+            </span>
+                        
+            <div id="zillow-display"></div>
 
         </div>
 
-        <div id="map">
-
+        <div id="map-container">
+            <span id="map-heading-container">
+                    <h2 id="map-head">Address Location</h2>
+                </span>
+                                
+            <div id="map"></div>
         </div>
     </div>
-
-    </div>
-
+</div>
     <script src="js/userInput.js" type="text/javascript">
 
 
