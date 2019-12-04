@@ -29,10 +29,10 @@ var yieldToFixed = 0;
 // We also need to get the user address!
 // var address = "";
 
-$(document).ready(function () {
+$(document).ready(function() {
   //   Initial variables
 
-  $("#submit").on("click", function (event) {
+  $("#submit").on("click", function(event) {
     event.preventDefault();
 
     address = $("#address")
