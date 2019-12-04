@@ -6,107 +6,131 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>User Input</title>
+    <link href="https://fonts.googleapis.com/css?family=Gupter&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lalezar&display=swap" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css"
         type="text/css">
-    <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-database.js"></script>
+    <link rel="stylesheet" href="stylesheets/userinputstyles.css">
+
 
 </head>
 
 <body>
 
-    <div class="jumbotron jumbotron-fluid bg-dark text-center headerBox">
-        <div class="container">
-            <h1 class="display-4 text-light">  TESTING 
-            </h1>
-        </div>
-    </div>
-
     <header>
+        <span id="left-nav">
+            <a class="nav-link" href="/userinput">New Search</a>
+            <a class="nav-link" href="#">My Properties</a>
+        </span>
+
+        <span id="center-logo">Rentable</span>
+
+        <span id="right-nav">
+            <a class="nav-link" href="/logout">Logout</a>
+        </span>
 
     </header>
 
-    <div class="container formcontainer">
+    <div id="css-grid">
 
-        <div id="results" class="card-header bg-dark text-light border border-dark"> <i class="fas fa-calendar-alt"></i>
-            Results
+        <div id="all-results-content">
+            <span id="result-heading-container">
+                <h2 id="res-head"></i>Results</h2>
+            </span>
+            <div class="results"></div>
+            <hr>
         </div>
-        <div class="card-body border border-dark">
-            <div class="results"> Results</div>
-        </div>
-    </div>
-    </div>
-    <div class="container formcontainer">
-        <div class="card-header bg-dark text-light"> <i class="fas fa-user-plus"></i> Submit Property Details</div>
-        <div class="trainInput card-body background-color border border-dark">
-            <form>
-                <div class="">
-                    <div class="form-group searchT">
-                        <label for="inputTrain">Purchase Price</label>
-                        <input type="number" class="form-control" id="purchasePrice" placeholder="$">
-                    </div>
+
+
+        <div id="the-form">
+            <span id="property-details-heading-container">
+                <h2 id="prop-det-head">Submit Property Details</h2>
+            </span>
+            <div class="trainInput card-body background-color border border-dark">
+                <form>
                     <div class="">
-                        <div class="form-group">
-                            <label for="inputDestination">Projected Monthly Rent</label>
-                            <input type="number" class="form-control" id="monthlyRent" placeholder="">
+                        <div class="form-group search">
+                            <label for="inputTrain">Address</label>
+                            <input type="number" class="form-control" id="address" placeholder="">
+                        </div>
+                        <div class="form-group searchT">
+                            <label for="inputTrain">Purchase Price</label>
+                            <input type="number" class="form-control" id="purchasePrice" placeholder="$">
+                        </div>
+                        <div class="">
+                            <div class="form-group">
+                                <label for="inputDestination">Projected Monthly Rent</label>
+                                <input type="number" class="form-control" id="monthlyRent" placeholder="">
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="form-group">
-                    <label for="inputTime">Yearly Taxes </label>
-                    <input type="number" name="taxes" class="form-control" id="yearlyTaxes" placeholder="">
-                </div>
-                <div class="form-group">
-                    <label for="inputFrequency">Yearly Maintenance Cost </label>
-                    <input type="text" class="form-control" id="yearlyMaintenance"
-                        placeholder="If you're not sure, use roughly .05% of the projected purchase price">
-                </div>
+                    <div class="form-group">
+                        <label for="inputTime">Yearly Taxes </label>
+                        <input type="number" name="taxes" class="form-control" id="yearlyTaxes" placeholder="">
+                    </div>
+                    <div class="form-group">
+                        <label for="inputFrequency">Yearly Maintenance Cost </label>
+                        <input type="text" class="form-control" id="yearlyMaintenance"
+                            placeholder="If you're not sure, use roughly .05% of the projected purchase price">
+                    </div>
 
-                <div class="form-group">
-                    <label for="inputFrequency">Renovation Costs</label>
-                    <input type="text" class="form-control" id="renovationCosts"
-                        placeholder="Total costs towards property improvement">
-                </div>
+                    <div class="form-group">
+                        <label for="inputFrequency">Renovation Costs</label>
+                        <input type="text" class="form-control" id="renovationCosts"
+                            placeholder="Total costs towards property improvement">
+                    </div>
 
-                <div class="form-group">
-                    <label for="inputFrequency">Insurance </label>
-                    <input type="text" class="form-control" id="yearlyInsurance"
-                        placeholder="If you're not sure, use roughly .05% of the projected purchase price">
-                </div>
+                    <div class="form-group">
+                        <label for="inputFrequency">Insurance </label>
+                        <input type="text" class="form-control" id="yearlyInsurance"
+                            placeholder="If you're not sure, use roughly .05% of the projected purchase price">
+                    </div>
 
-                <div class="form-group">
-                    <label for="inputFrequency">Utilities per Month</label>
-                    <input type="text" class="form-control" id="monthlyUtilities"
-                        placeholder="If tenants will pay all utilities, leave blank">
-                </div>
+                    <div class="form-group">
+                        <label for="inputFrequency">Utilities per Month</label>
+                        <input type="text" class="form-control" id="monthlyUtilities"
+                            placeholder="If tenants will pay all utilities, leave blank">
+                    </div>
 
-                <div class="form-group">
-                    <label for="inputFrequency">Vacancy Rate (0-100%) </label>
-                    <input type="percentage" class="form-control" id="vacancyRate" min="0" max="0"
-                        placeholder="Use 5 if you're not sure">
-                </div>
-
-
-                <div class="form-group">
-                    <label for="inputFrequency">Closing Costs</label>
-                    <input type="text" class="form-control" id="closingCosts"
-                        placeholder="Use 3% of the total purchase price if you're not sure">
-                </div>
+                    <div class="form-group">
+                        <label for="inputFrequency">Vacancy Rate (0-100%) </label>
+                        <input type="percentage" class="form-control" id="vacancyRate" min="0" max="0"
+                            placeholder="Use 5 if you're not sure">
+                    </div>
 
 
-                <button type="button" class="btn btn-dark submitButton" id="submit"> Submit</button>
+                    <div class="form-group">
+                        <label for="inputFrequency">Closing Costs</label>
+                        <input type="text" class="form-control" id="closingCosts"
+                            placeholder="Use 3% of the total purchase price if you're not sure">
+                    </div>
 
-                <button type="button" class="btn btn-dark clearButton" id="clear"> Clear Results</button>
-            </form>
+
+                    <button type="button" class="btn btn-dark submitButton" id="submit"> Submit</button>
+
+                    <button type="button" class="btn btn-dark clearButton" id="clear"> Clear Results</button>
+                </form>
+            </div>
         </div>
-
     </div>
 
 
-    <script src="userInput.js" type="text/javascript">
+
+
+    <div id="zillow-and-map-container">
+        <div id="zillow-api">
+
+        </div>
+
+        <div id="map">
+
+        </div>
+    </div>
+
+    </div>
+
+    <script src="js/userInput.js" type="text/javascript">
 
 
     // JS GOES HERE. 
