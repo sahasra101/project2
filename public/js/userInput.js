@@ -26,12 +26,19 @@ var yearOneCost = 0;
 var yearOneYield = 0;
 // I want to convert this number to a two decimal percentage.
 var yieldToFixed = 0;
+// We also need to get the user address!
+// var address = "";
 
 $(document).ready(function() {
   //   Initial variables
 
   $("#submit").on("click", function(event) {
     event.preventDefault();
+
+    // address = $("#address")
+    //   .val()
+    //   .trim();
+    // console.log("Address: " + address);
 
     purchasePrice = $("#purchasePrice")
       .val()
@@ -108,7 +115,10 @@ $(document).ready(function() {
     // Want to convert the number to only include two decimals.
     yieldToFixed = yearOneYield.toFixed(2);
 
-    $(".results").text("Purchase Price: " + purchasePrice);
+    // $(".results").text("Address: " + address);
+    $(".results").append("<p>" + "Yield: " + yieldToFixed + "%" + "</p>");
+    $(".results").append("<p>" + "Initial Investment: " + "$" + yearOneCost + "</p>");
+    $(".results").append("Year one return: " + netRentToFixed);
     $(".results").append("Yield: " + yieldToFixed + "%");
   });
 });
