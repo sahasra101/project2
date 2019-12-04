@@ -114,7 +114,30 @@ label {
   display: block;
 }
 
+.form-control {
+  width: 400px;
+  margin: 8px 0px 8px 0px;
+}
+
+.form-button {
+  padding: 10px;
+  background-color: rgb(97, 97, 245);
+  color: white;
+  border-radius: 8px;
+  border: .5px solid rgb(71, 83, 252);
+  margin: 8px 8px 0px 8px;
+}
+
+.form-button:hover {
+  color: rgb(97, 97, 245);
+  background-color: rgb(224, 206, 206);
+  border: .5px solid rgb(97, 97, 245);
+  font-weight: bold;
+  transition: all 1s ease;
+}
+
 #zillow-and-map-container {
   grid-row-start: 1;
   grid-row-end: 3;
 }
+
