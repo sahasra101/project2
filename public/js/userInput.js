@@ -35,10 +35,10 @@ $(document).ready(function() {
   $("#submit").on("click", function(event) {
     event.preventDefault();
 
-    // address = $("#address")
-    //   .val()
-    //   .trim();
-    // console.log("Address: " + address);
+    address = $("#address")
+      .val()
+      .trim();
+    console.log("Address: " + address);
 
     purchasePrice = $("#purchasePrice")
       .val()
@@ -115,10 +115,13 @@ $(document).ready(function() {
     // Want to convert the number to only include two decimals.
     yieldToFixed = yearOneYield.toFixed(2);
 
-    // $(".results").text("Address: " + address);
+    $(".results").append("<p>" + "Address: " + address + "</p>");
     $(".results").append("<p>" + "Yield: " + yieldToFixed + "%" + "</p>");
-    $(".results").append("<p>" + "Initial Investment: " + "$" + yearOneCost + "</p>");
-    $(".results").append("Year one return: " + netRentToFixed);
-    $(".results").append("Yield: " + yieldToFixed + "%");
+    $(".results").append(
+      "<p>" + "Initial Investment: " + "$" + yearOneCost + "</p>"
+    );
+    $(".results").append(
+      "<p>" + "Year one return: " + "$" + netRentToFixed + "</p>"
+    );
   });
 });
