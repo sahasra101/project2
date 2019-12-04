@@ -1,0 +1,163 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Gupter', serif;
+}
+
+#css-grid {
+  display: grid;
+  grid-template-rows: 1fr 6.2fr 1fr;
+  grid-template-columns: 2fr 2fr 2fr;
+}
+
+header {
+  display: grid;
+  grid-template-columns: 2fr 2fr 2fr;
+  grid-row-start: 1;
+  grid-row-end: 2;
+  grid-column-start: 1;
+  grid-column-end: 4;
+  border-bottom: 1px solid grey;
+  padding: 25px 0px 25px 8px;
+}
+
+#left-nav {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  align-self: center;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: black;
+  padding: 0px 7px 0px 7px;
+}
+
+.nav-link:hover {
+  text-decoration: underline;
+  color: black;
+}
+
+#center-logo {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  justify-self: center;
+  font-size: 22px;
+  font-weight: bold;
+  color: rgb(97, 97, 245);
+  letter-spacing: 1.4px;
+}
+
+#right-nav {
+  grid-column-start: 3;
+  grid-column-end: 4;
+  align-self: center;
+  justify-self: end;
+  padding-right: 25px;
+}
+
+#big-picture {
+  grid-row-start: 2;
+  grid-row-end: 3;
+  grid-column-start: 1;
+  grid-column-end: 4;
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 3fr;
+  background-image: url("/img/landing.jpg");
+  background-position-y: 55%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-bottom: 1px solid grey;
+}
+
+#big-h1 {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 2;
+  grid-row-end: 3;
+  justify-self: center;
+  font-size: 48px;
+  letter-spacing: 1.8px;
+  color: white;
+  -webkit-text-stroke: .1px rgb(80, 60, 60); 
+  font-family: 'Lalezar', cursive;
+}
+
+h3 {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 3;
+  grid-row-end: 4;
+  font-size: 22px;
+  justify-self: center;
+  color: white;
+  -webkit-text-stroke: .3px rgb(17, 16, 16); 
+  font-family: 'Lalezar', cursive;
+  margin-top: 6px;
+}
+
+#buttons {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 4;
+  grid-row-end: 5;
+  justify-self: center;
+  margin-top: 6px;
+}
+
+.big-pic-button {
+  padding: 10px;
+  background-color: rgb(97, 97, 245);
+  color: white;
+  border-radius: 8px;
+  border: .5px solid rgb(71, 83, 252);
+  margin: 0px 8px 0px 8px;
+}
+
+.big-pic-button:hover {
+  color: rgb(97, 97, 245);
+  background-color: rgb(224, 206, 206);
+  border: .5px solid rgb(97, 97, 245);
+  font-weight: bold;
+  transition: all 1s ease;
+}
+
+#power {
+  grid-row-start: 3;
+  grid-row-end: 4;
+  grid-column-start: 1;
+  grid-column-end: 2;
+  margin: 38px 0px 0px 15px;
+  align-self: center;
+  margin-bottom: 7px;
+}
+
+#built-by {
+  grid-row-start: 3;
+  grid-row-end: 4;
+  grid-column-start: 3;
+  grid-row-end: 4;
+  justify-self: end;
+  align-self: center;
+  margin-right: 15px;
+  margin-top: 16px;
+}
+
+#built-label {
+  margin-left: 135px;
+}
+
+#zillow {
+  margin-left: 20px;
+  height: 20px;
+  width: 70px;
+}
+
+#google {
+  height: 20px;
+  width: 50px;
+}
