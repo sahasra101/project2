@@ -27,7 +27,9 @@ var yearOneYield = 0;
 // I want to convert this number to a two decimal percentage.
 var yieldToFixed = 0;
 // We also need to get the user address!
-// var address = "";
+var address = "";
+// The results array that we push the button results to.
+var resultsArray = [];
 
 $(document).ready(function() {
   //   Initial variables
@@ -140,8 +142,20 @@ $(document).ready(function() {
 
     var buttonRow = $("<tr>");
     var button = $(
-      "<button type='button' class='btn btn-primary' id='saveSearch'> Save Search </button>"
+      "<button type='button' class='btn btn-primary saveSearch' data-id='" +
+        resultsArray.length +
+        "'> Save Search </button>"
     );
+
+    resultsArray.push([
+      address,
+      yearOneCost,
+      netRentToFixed,
+      netRentToFixed,
+      yieldToFixed
+    ]);
+
+    console.log(resultsArray);
 
     buttonRow.append(button);
     resultsTable.append(buttonRow);
