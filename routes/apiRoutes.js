@@ -1,6 +1,6 @@
 var db = require("../models");
 var passport = require("../config/passport");
-var Zillow = require('zillow-node');
+var Zillow = require("zillow-node");
 
 module.exports = function(app) {
   app.post("/api/login", passport.authenticate("local"), function(req, res) {
@@ -61,7 +61,6 @@ module.exports = function(app) {
       };
       // console.log(relInfo);
       res.json(relInfo);
-
     });
   });
 };
