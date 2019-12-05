@@ -3,7 +3,7 @@ module.exports = {
   development: {
     username: "root",
     password: process.env.MYSQL_PASSWORD,
-    database: "exampledb",
+    database: "properties_db",
     host: "localhost",
     dialect: "mysql"
   },
