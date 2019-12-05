@@ -32,9 +32,6 @@ var address = "";
 var resultsArray = [];
 
 $(document).ready(function() {
-
-  //   Initial variables
-
   $("#submit").on("click", function(event) {
     event.preventDefault();
 
@@ -61,56 +58,65 @@ $(document).ready(function() {
       // data should be the relevant info from the Zillow API call
     });
 
-    purchasePrice = $("#purchasePrice")
-      .val()
-      .trim();
+    purchasePrice =
+      $("#purchasePrice")
+        .val()
+        .trim() || 0;
     console.log(purchasePrice);
-    monthlyRent = $("#monthlyRent")
-      .val()
-      .trim();
+
+    monthlyRent =
+      $("#monthlyRent")
+        .val()
+        .trim() || 0;
     console.log("monthly rent: " + monthlyRent);
 
     yearlyRent = monthlyRent * 12;
     console.log("yearly rent: " + yearlyRent);
 
-    vacancyRate = document.getElementById("vacancyRate").value / 100;
+    vacancyRate = document.getElementById("vacancyRate").value / 100 || 0;
 
     console.log("vacancy rate: " + vacancyRate);
 
     yearOneRent = yearlyRent - vacancyRate * yearlyRent;
     console.log("yearOneRent: " + yearOneRent);
 
-    yearlyTaxes = $("#yearlyTaxes")
-      .val()
-      .trim();
+    yearlyTaxes =
+      $("#yearlyTaxes")
+        .val()
+        .trim() || 0;
     console.log("yearly taxes: " + yearlyTaxes);
 
-    yearlyInsurance = $("#yearlyInsurance")
-      .val()
-      .trim();
+    yearlyInsurance =
+      $("#yearlyInsurance")
+        .val()
+        .trim() || 0;
     console.log("yearly taxes: " + yearlyInsurance);
 
-    yearlyMaintenance = $("#yearlyMaintenance")
-      .val()
-      .trim();
+    yearlyMaintenance =
+      $("#yearlyMaintenance")
+        .val()
+        .trim() || 0;
     console.log("yearly maintenance cost: " + yearlyMaintenance);
 
-    monthlyUtilities = $("#monthlyUtilities")
-      .val()
-      .trim();
+    monthlyUtilities =
+      $("#monthlyUtilities")
+        .val()
+        .trim() || 0;
     console.log("monthly utilities: " + monthlyUtilities);
 
     yearlyUtilities = monthlyUtilities * 12;
     console.log("yearly Utilities: " + yearlyUtilities);
 
-    closingCosts = $("#closingCosts")
-      .val()
-      .trim();
+    closingCosts =
+      $("#closingCosts")
+        .val()
+        .trim() || 0;
     console.log("closing costs: " + closingCosts);
 
-    renovationCosts = $("#renovationCosts")
-      .val()
-      .trim();
+    renovationCosts =
+      $("#renovationCosts")
+        .val()
+        .trim() || 0;
     console.log("renovation Costs: " + renovationCosts);
 
     netRent =
@@ -130,7 +136,7 @@ $(document).ready(function() {
       parseInt(renovationCosts);
     console.log("total year one costs: " + yearOneCost);
 
-    yearOneYield = (netRentToFixed / yearOneCost) * 100;
+    yearOneYield = (netRentToFixed / yearOneCost) * 100 || 0;
     console.log("total yield = " + yearOneYield);
 
     // Want to convert the number to only include two decimals.
@@ -162,17 +168,11 @@ $(document).ready(function() {
     var buttonRow = $("<tr>");
     var button = $(
       "<button type='button' class='btn btn-primary saveSearch' data-id='" +
-      resultsArray.length +
-      "'> Save Search </button>"
+        resultsArray.length +
+        "'> Save Search </button>"
     );
 
-    resultsArray.push([
-      address,
-      yearOneCost,
-      netRentToFixed,
-      netRentToFixed,
-      yieldToFixed
-    ]);
+    resultsArray.push([address, yearOneCost, netRentToFixed, yieldToFixed]);
 
     console.log(resultsArray);
 
@@ -183,14 +183,15 @@ $(document).ready(function() {
   });
 });
 
+// eslint-disable-next-line no-unused-vars
 function initMap() {
-  var map = new google.maps.Map(document.getElementById('map'), {
+  var map = new google.maps.Map(document.getElementById("map"), {
     zoom: 8,
-    center: {lat: -34.397, lng: 150.644}
+    center: { lat: -34.397, lng: 150.644 }
   });
   var geocoder = new google.maps.Geocoder();
 
-  document.getElementById('submit').addEventListener('click', function() {
+  document.getElementById("submit").addEventListener("click", function() {
     geocodeAddress(geocoder, map);
   });
 }
@@ -202,6 +203,7 @@ function geocodeAddress(geocoder, resultsMap) {
   geocoder.geocode({"address": add}, function(results, status) {
     if (status === "OK") {
       resultsMap.setCenter(results[0].geometry.location);
+      // eslint-disable-next-line no-unused-vars
       var marker = new google.maps.Marker({
         map: resultsMap,
         position: results[0].geometry.location
@@ -210,5 +212,5 @@ function geocodeAddress(geocoder, resultsMap) {
       alert("Geocode was not successful for the following reason: " + status);
     }
   });
-// eslint-disable-next-line prettier/prettier
+  // eslint-disable-next-line prettier/prettier
 }

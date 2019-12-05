@@ -1,6 +1,6 @@
 require("dotenv").config();
 var express = require("express");
-// var bodyParser = require("body-parser");
+var bodyParser = require("body-parser");
 var session = require("express-session");
 var passport = require("./config/passport");
 
@@ -14,6 +14,11 @@ app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 app.use(express.static("public"));
 
+//
+app.use(bodyParser.json());
+app.use(express.urlencoded({ extended: true }));
+app.use(bodyParser.text());
+app.use(bodyParser.json({ type: "application/vnd.api+json" }));
 // // Handlebars
 // app.engine(
 //   "handlebars",
@@ -31,6 +36,8 @@ app.use(passport.session());
 
 // Routes
 require("./routes/apiRoutes")(app);
+require("./routes/myPropertiesRoutes")(app);
+require("./routes/postApiRoutes")(app);
 require("./routes/htmlRoutes")(app);
 
 var syncOptions = { force: false };

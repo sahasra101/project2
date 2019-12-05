@@ -139,6 +139,10 @@ label {
   display: block;
 }
 
+.info {
+  margin-left: 12px;
+}
+
 .form-control {
   width: 400px;
   margin: 8px 0px 8px 0px;
@@ -159,6 +163,10 @@ label {
   border: .5px solid rgb(97, 97, 245);
   font-weight: bold;
   transition: all 1s ease;
+}
+
+.form-button:focus {
+  outline: none;
 }
 
 #zillow-and-map-container {
