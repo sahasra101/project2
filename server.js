@@ -36,7 +36,7 @@ app.use(passport.session());
 
 // Routes
 require("./routes/apiRoutes")(app);
-require("./routes/addressApiRoutes")(app);
+require("./routes/myPropertiesRoutes")(app);
 require("./routes/postApiRoutes")(app);
 require("./routes/htmlRoutes")(app);
 
