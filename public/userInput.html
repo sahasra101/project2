@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>User Input</title>
+    <title>Rentable - New Search</title>
     <link href="https://fonts.googleapis.com/css?family=Gupter&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Lalezar&display=swap" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -24,7 +24,7 @@
             <a class="nav-link" href="#">My Properties</a>
         </span>
 
-        <span id="center-logo"><a id="home-link" href="/">Rentable</a></span>
+        <a id="logo-link" href="/members"><img id="logo" src="/img/logo.jpg" alt="Rentable Logo"></a>
 
         <span id="right-nav">
             <a class="nav-link" href="/logout">Logout</a>
@@ -50,57 +50,61 @@
                 <form>
                     <div class="">
                         <div class="form-group search">
-                            <label for="inputTrain">Address</label>
-                            <input type="text" class="form-control" id="address" placeholder="">
+                            <label for="street-address">Street Address</label>
+                            <input type="text" class="form-control" id="street-address" placeholder="">
                         </div>
+                        <div class="form-group search">
+                                <label for="city-state-or-zip">City, State -or- Zipcode</label>
+                                <input type="text" class="form-control" id="city-state-or-zip" placeholder="">
+                            </div>
                         <div class="form-group searchT">
-                            <label for="inputTrain">Purchase Price</label>
+                            <label for="purch-price">Purchase Price</label>
                             <input type="number" class="form-control" id="purchasePrice" placeholder="$">
                         </div>
                         <div class="">
                             <div class="form-group">
-                                <label for="inputDestination">Projected Monthly Rent</label>
+                                <label for="proj-mo-rent">Projected Monthly Rent</label>
                                 <input type="number" class="form-control" id="monthlyRent" placeholder="">
                             </div>
                         </div>
                     </div>
                     <div class="form-group">
-                        <label for="inputTime">Yearly Taxes</label>
+                        <label for="year-tax">Yearly Taxes</label>
                         <input type="number" name="taxes" class="form-control" id="yearlyTaxes" placeholder="">
                     </div>
                     <div class="form-group">
-                        <label for="inputFrequency">Yearly Maintenance Cost </label>
+                        <label for="year-main-cost">Yearly Maintenance Cost </label>
                         <input type="text" class="form-control" id="yearlyMaintenance"
                             placeholder="If you're not sure, use roughly .05% of the projected purchase price">
                     </div>
 
                     <div class="form-group">
-                        <label for="inputFrequency">Renovation Costs</label>
+                        <label for="ren-cost">Renovation Costs</label>
                         <input type="text" class="form-control" id="renovationCosts"
                             placeholder="Total costs towards property improvement">
                     </div>
 
                     <div class="form-group">
-                        <label for="inputFrequency">Insurance </label>
+                        <label for="insurance">Insurance </label>
                         <input type="text" class="form-control" id="yearlyInsurance"
                             placeholder="If you're not sure, use roughly .05% of the projected purchase price">
                     </div>
 
                     <div class="form-group">
-                        <label for="inputFrequency">Utilities per Month</label>
+                        <label for="util-mo">Utilities per Month</label>
                         <input type="text" class="form-control" id="monthlyUtilities"
                             placeholder="If tenants will pay all utilities, leave blank">
                     </div>
 
                     <div class="form-group">
-                        <label for="inputFrequency">Vacancy Rate (0-100%) </label>
+                        <label for="vac-rate">Vacancy Rate (0-100%) </label>
                         <input type="percentage" class="form-control" id="vacancyRate" min="0" max="0"
                             placeholder="Use 5 if you're not sure">
                     </div>
 
 
                     <div class="form-group">
-                        <label for="inputFrequency">Closing Costs</label>
+                        <label for="clo-cost">Closing Costs</label>
                         <input type="text" class="form-control" id="closingCosts"
                             placeholder="Use 3% of the total purchase price if you're not sure">
                     </div>
@@ -121,7 +125,8 @@
         <div id="zillow-api">
              
             <span id="zillow-heading-container">
-                <h2 id="zillow-head">Zillow Search Results</h2>
+                <h2 id="zillow-head">Property Search Results</h2>
+                <img id="zillow-logo" src="/img/zillow.gif" alt="Real Estate on Zillow">
             </span>
                         
             <div id="zillow-display"></div>

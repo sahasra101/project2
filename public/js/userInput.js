@@ -35,10 +35,15 @@ $(document).ready(function() {
   $("#submit").on("click", function(event) {
     event.preventDefault();
 
-    address = $("#address")
+    address = $("#street-address")
       .val()
       .trim();
     console.log("Address: " + address);
+
+    cityStateOrZip = $("#city-state-or-zip")
+      .val()
+      .trim();
+    console.log("City State or Zip: " + cityStateOrZip);
 
     purchasePrice = $("#purchasePrice")
       .val()
