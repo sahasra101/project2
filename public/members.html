@@ -18,10 +18,10 @@
     <header>
       <span id="left-nav">
         <a class="nav-link" href="/userinput">New Search</a>
-        <a class="nav-link" href="#">My Properties</a>
+        <a class="nav-link" href="/myproperties">My Properties</a>
       </span>
 
-      <img id="logo" src="/img/logo.jpg" alt="Rentable Logo">
+      <a id="logo-link" href="/members"><img id="logo" src="/img/logo.jpg" alt="Rentable Logo"></a>
 
       <span id="right-nav">
         <a class="nav-link" href="/logout">Logout</a>
@@ -39,22 +39,26 @@
 
       <span id="buttons">
         <a href="/userinput"><button class="big-pic-button">New Search</button></a>
-        <button class="big-pic-button">My Properties</button>
+        <a href="/myproperties"><button class="big-pic-button">My Properties</button></a>
       </span>
 
     </div>
 
-    <span id="power">
-       Powered By:
-      <a href="http://www.zillow.com" target="_blank"><img id="zillow" class="power" src="/img/zillow.png" alt=""></a>
-      <a href="http://maps.google.com" target="_blank"><img src="/img/google.png" alt="" id="google" class="power"></a>
-    </span>
+    <div id="footer">
 
-    <span id="built-by">
-      <p id="built-label">Built By:</p>
-      <p>Tommy Flynn, Tawny Francis, Ajay Kiri, Justin Lampe</p>
-    </span>
+      <span id="power">
+        Powered By:
+        <a href="http://www.zillow.com" target="_blank"><img id="zillow" class="power" src="/img/zillow.png" alt=""></a>
+        <a href="http://maps.google.com" target="_blank"><img src="/img/google.png" alt="" id="google"
+            class="power"></a>
+      </span>
 
+      <span id="built-by">
+        <p id="built-label">Built By:</p>
+        <p>Tommy Flynn, Tawny Francis, Ajay Kiri, Justin Lampe</p>
+      </span>
+      
+    </div>
   </div>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>

@@ -10,12 +10,11 @@ body {
 #css-grid {
   display: grid;
   grid-template-rows: 1fr 6.2fr 1fr;
-  grid-template-columns: 2fr 2fr 2fr;
 }
 
 header {
   display: grid;
-  grid-template-columns: 2fr 2fr 2fr;
+  grid-template-columns: 2fr auto 2fr;
   grid-row-start: 1;
   grid-row-end: 2;
   grid-column-start: 1;
@@ -63,6 +62,10 @@ header {
   margin-top: 6px;
 }
 
+#logo-link {
+  justify-self: center;
+}
+
 #right-nav {
   grid-column-start: 3;
   grid-column-end: 4;
@@ -77,7 +80,6 @@ header {
   grid-column-start: 1;
   grid-column-end: 4;
   display: grid;
-  grid-template-columns: 1fr 2fr 1fr;
   grid-template-rows: 1fr 1fr 1fr 3fr;
   background-image: url("/img/landing.jpg");
   background-position-y: 55%;
@@ -87,8 +89,6 @@ header {
 }
 
 #big-h1 {
-  grid-column-start: 2;
-  grid-column-end: 3;
   grid-row-start: 2;
   grid-row-end: 3;
   justify-self: center;
@@ -100,8 +100,6 @@ header {
 }
 
 h3 {
-  grid-column-start: 2;
-  grid-column-end: 3;
   grid-row-start: 3;
   grid-row-end: 4;
   font-size: 22px;
@@ -113,8 +111,6 @@ h3 {
 }
 
 #buttons {
-  grid-column-start: 2;
-  grid-column-end: 3;
   grid-row-start: 4;
   grid-row-end: 5;
   justify-self: center;
@@ -138,9 +134,20 @@ h3 {
   transition: all 1s ease;
 }
 
-#power {
+.big-pic-button:focus {
+  outline: none;
+}
+
+#footer {
   grid-row-start: 3;
   grid-row-end: 4;
+  grid-column-start: 1;
+  grid-column-end: 4;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+#power {
   grid-column-start: 1;
   grid-column-end: 2;
   margin: 38px 0px 0px 15px;
@@ -148,11 +155,10 @@ h3 {
   margin-bottom: 7px;
 }
 
+
 #built-by {
-  grid-row-start: 3;
-  grid-row-end: 4;
-  grid-column-start: 3;
-  grid-row-end: 4;
+  grid-column-start: 2;
+  grid-column-end: 3;
   justify-self: end;
   align-self: center;
   margin-right: 15px;
