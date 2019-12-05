@@ -24,4 +24,8 @@ module.exports = function(app) {
   app.get("/userinput", isAuthenticated, function(req, res) {
     res.sendFile(path.join(__dirname, "../public/userInput.html"));
   });
+
+  app.get("/myproperties", isAuthenticated, function(req, res) {
+    res.sendFile(path.join(__dirname, "../public/myproperties.html"));
+  });
 };
