@@ -32,16 +32,7 @@ var address = "";
 var resultsArray = [];
 
 $(document).ready(function() {
-  $.ajax({
-    url: "/api/zillow",
-    method: "GET",
-    success: function(data) {
-      console.log(data);
-    },
-    error: function(err) {
-      console.log(err);
-    }
-  });
+
   //   Initial variables
 
   $("#submit").on("click", function(event) {
@@ -56,6 +47,19 @@ $(document).ready(function() {
       .val()
       .trim();
     console.log("City State or Zip: " + cityStateOrZip);
+
+    var addZillow = {
+      address: address,
+      citystatezip: cityStateOrZip,
+      rentzestimate: "true"
+    };
+
+    console.log(addZillow);
+
+    $.post("/api/address", addZillow, function(data) {
+      console.log("zillow api data: ", data);
+      // data should be the relevant info from the Zillow API call
+    });
 
     purchasePrice = $("#purchasePrice")
       .val()
@@ -158,8 +162,8 @@ $(document).ready(function() {
     var buttonRow = $("<tr>");
     var button = $(
       "<button type='button' class='btn btn-primary saveSearch' data-id='" +
-        resultsArray.length +
-        "'> Save Search </button>"
+      resultsArray.length +
+      "'> Save Search </button>"
     );
 
     resultsArray.push([
@@ -179,28 +183,32 @@ $(document).ready(function() {
   });
 });
 
-var map;
-var marker;
-
 function initMap() {
-  map = new google.maps.Map(document.getElementById("map"), {
-    zoom: 14,
-    center: { lat: 40.13903, lng: -75.212611 }
+  var map = new google.maps.Map(document.getElementById('map'), {
+    zoom: 8,
+    center: {lat: -34.397, lng: 150.644}
   });
+  var geocoder = new google.maps.Geocoder();
 
-  marker = new google.maps.Marker({
-    map: map,
-    draggable: true,
-    animation: google.maps.Animation.DROP,
-    position: { lat: 40.13903, lng: -75.212611 }
+  document.getElementById('submit').addEventListener('click', function() {
+    geocodeAddress(geocoder, map);
   });
-  marker.addListener("click", toggleBounce);
 }
 
-function toggleBounce() {
-  if (marker.getAnimation() !== null) {
-    marker.setAnimation(null);
-  } else {
-    marker.setAnimation(google.maps.Animation.BOUNCE);
-  }
+function geocodeAddress(geocoder, resultsMap) {
+  // eslint-disable-next-line prettier/prettier
+  var add = address + ", " +cityStateOrZip;
+  // eslint-disable-next-line prettier/prettier
+  geocoder.geocode({"address": add}, function(results, status) {
+    if (status === "OK") {
+      resultsMap.setCenter(results[0].geometry.location);
+      var marker = new google.maps.Marker({
+        map: resultsMap,
+        position: results[0].geometry.location
+      });
+    } else {
+      alert("Geocode was not successful for the following reason: " + status);
+    }
+  });
+// eslint-disable-next-line prettier/prettier
 }

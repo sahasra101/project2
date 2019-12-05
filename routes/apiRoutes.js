@@ -38,28 +38,30 @@ module.exports = function(app) {
     }
   });
 
-  app.get("/api/zillow", function(req, res) {
-    var z = new Zillow("X1-ZWz17idc5wq96z_6ikyi");
-
+  app.post("/api/address", function(req, res) {
+    console.log("req.body");
+    console.log(req.body);
     var params = {
-      address: "120 N Bethlehem Pike Apt 302a",
-      citystatezip: "Fort Washington, Pa",
+      address: req.body.address,
+      citystatezip: req.body.citystatezip,
       rentzestimate: "true"
     };
+    console.log(params);
+
+    var z = new Zillow("X1-ZWz17idc5wq96z_6ikyi");
 
     z.get("GetSearchResults", params).then(function(results) {
       var relInfo = {
-        streetAdd: results.response.results.result[0].address.street,
-        cityAdd: results.response.results.result[0].address.city,
-        stateAdd: results.response.results.result[0].address.state,
-        zipAdd: results.response.results.result[0].address.zipcode,
-        lat: results.response.results.result[0].address.latitude,
-        lng: results.response.results.result[0].address.longitude,
-        zestimate: results.response.results.result[0].zestimate.amount,
-        rentzestimate: results.response.results.result[0].rentzestimate.amount,
-        homeDetailsURL: results.response.results.result[0].links.homedetails
+        streetAdd: results.response.results.result.address.street,
+        cityAdd: results.response.results.result.address.city,
+        stateAdd: results.response.results.result.address.state,
+        zipAdd: results.response.results.result.address.zipcode,
+        lat: results.response.results.result.address.latitude,
+        lng: results.response.results.result.address.longitude,
+        zestimate: results.response.results.result.zestimate.amount,
+        rentzestimate: results.response.results.result.rentzestimate.amount,
+        homeDetailsURL: results.response.results.result.links.homedetails
       };
-      // console.log(relInfo);
       res.json(relInfo);
     });
   });
