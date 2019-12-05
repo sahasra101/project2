@@ -70,41 +70,39 @@
                     </div>
                     <div class="form-group">
                         <label for="inputFrequency">Yearly Maintenance Cost </label>
-                        <input type="text" class="form-control" id="yearlyMaintenance"
+                        <input type="number" class="form-control" id="yearlyMaintenance"
                             placeholder="If you're not sure, use roughly .05% of the projected purchase price">
                     </div>
 
                     <div class="form-group">
                         <label for="inputFrequency">Renovation Costs</label>
-                        <input type="text" class="form-control" id="renovationCosts"
+                        <input type="number" class="form-control" id="renovationCosts"
                             placeholder="Total costs towards property improvement">
                     </div>
 
                     <div class="form-group">
                         <label for="inputFrequency">Insurance </label>
-                        <input type="text" class="form-control" id="yearlyInsurance"
+                        <input type="number" class="form-control" id="yearlyInsurance"
                             placeholder="If you're not sure, use roughly .05% of the projected purchase price">
                     </div>
 
                     <div class="form-group">
                         <label for="inputFrequency">Utilities per Month</label>
-                        <input type="text" class="form-control" id="monthlyUtilities"
+                        <input type="number" class="form-control" id="monthlyUtilities"
                             placeholder="If tenants will pay all utilities, leave blank">
                     </div>
 
                     <div class="form-group">
                         <label for="inputFrequency">Vacancy Rate (0-100%) </label>
-                        <input type="percentage" class="form-control" id="vacancyRate" min="0" max="0"
+                        <input type="number" class="form-control" id="vacancyRate" min="0" max="100"
                             placeholder="Use 5 if you're not sure">
                     </div>
 
-
                     <div class="form-group">
                         <label for="inputFrequency">Closing Costs</label>
-                        <input type="text" class="form-control" id="closingCosts"
+                        <input type="number" class="form-control" id="closingCosts"
                             placeholder="Use 3% of the total purchase price if you're not sure">
                     </div>
-
 
                     <button type="button" class="form-button" id="submit"> Submit</button>
 
@@ -112,31 +110,31 @@
                 </form>
             </div>
         </div>
-    
 
 
 
 
-    <div id="zillow-and-map-container">
-        <div id="zillow-api">
-             
-            <span id="zillow-heading-container">
-                <h2 id="zillow-head">Zillow Search Results</h2>
-            </span>
-                        
-            <div id="zillow-display"></div>
 
-        </div>
+        <div id="zillow-and-map-container">
+            <div id="zillow-api">
 
-        <div id="map-container">
-            <span id="map-heading-container">
+                <span id="zillow-heading-container">
+                    <h2 id="zillow-head">Zillow Search Results</h2>
+                </span>
+
+                <div id="zillow-display"></div>
+
+            </div>
+
+            <div id="map-container">
+                <span id="map-heading-container">
                     <h2 id="map-head">Address Location</h2>
                 </span>
-                                
-            <div id="map"></div>
+
+                <div id="map"></div>
+            </div>
         </div>
     </div>
-</div>
     <script src="js/userInput.js" type="text/javascript">
 
 
