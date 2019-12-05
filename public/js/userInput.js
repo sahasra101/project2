@@ -147,13 +147,7 @@ $(document).ready(function() {
         "'> Save Search </button>"
     );
 
-    resultsArray.push([
-      address,
-      yearOneCost,
-      netRentToFixed,
-      // netRentToFixed,
-      yieldToFixed
-    ]);
+    resultsArray.push([address, yearOneCost, netRentToFixed, yieldToFixed]);
 
     console.log(resultsArray);
 
