@@ -151,7 +151,7 @@ $(document).ready(function() {
       address,
       yearOneCost,
       netRentToFixed,
-      netRentToFixed,
+      // netRentToFixed,
       yieldToFixed
     ]);
 
