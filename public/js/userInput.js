@@ -47,56 +47,65 @@ $(document).ready(function() {
       .trim();
     console.log("City State or Zip: " + cityStateOrZip);
 
-    purchasePrice = $("#purchasePrice")
-      .val()
-      .trim();
+    purchasePrice =
+      $("#purchasePrice")
+        .val()
+        .trim() || 0;
     console.log(purchasePrice);
-    monthlyRent = $("#monthlyRent")
-      .val()
-      .trim();
+
+    monthlyRent =
+      $("#monthlyRent")
+        .val()
+        .trim() || 0;
     console.log("monthly rent: " + monthlyRent);
 
     yearlyRent = monthlyRent * 12;
     console.log("yearly rent: " + yearlyRent);
 
-    vacancyRate = document.getElementById("vacancyRate").value / 100;
+    vacancyRate = document.getElementById("vacancyRate").value / 100 || 0;
 
     console.log("vacancy rate: " + vacancyRate);
 
     yearOneRent = yearlyRent - vacancyRate * yearlyRent;
     console.log("yearOneRent: " + yearOneRent);
 
-    yearlyTaxes = $("#yearlyTaxes")
-      .val()
-      .trim();
+    yearlyTaxes =
+      $("#yearlyTaxes")
+        .val()
+        .trim() || 0;
     console.log("yearly taxes: " + yearlyTaxes);
 
-    yearlyInsurance = $("#yearlyInsurance")
-      .val()
-      .trim();
+    yearlyInsurance =
+      $("#yearlyInsurance")
+        .val()
+        .trim() || 0;
     console.log("yearly taxes: " + yearlyInsurance);
 
-    yearlyMaintenance = $("#yearlyMaintenance")
-      .val()
-      .trim();
+    yearlyMaintenance =
+      $("#yearlyMaintenance")
+        .val()
+        .trim() || 0;
     console.log("yearly maintenance cost: " + yearlyMaintenance);
 
-    monthlyUtilities = $("#monthlyUtilities")
-      .val()
-      .trim();
+    monthlyUtilities =
+      $("#monthlyUtilities")
+        .val()
+        .trim() || 0;
     console.log("monthly utilities: " + monthlyUtilities);
 
     yearlyUtilities = monthlyUtilities * 12;
     console.log("yearly Utilities: " + yearlyUtilities);
 
-    closingCosts = $("#closingCosts")
-      .val()
-      .trim();
+    closingCosts =
+      $("#closingCosts")
+        .val()
+        .trim() || 0;
     console.log("closing costs: " + closingCosts);
 
-    renovationCosts = $("#renovationCosts")
-      .val()
-      .trim();
+    renovationCosts =
+      $("#renovationCosts")
+        .val()
+        .trim() || 0;
     console.log("renovation Costs: " + renovationCosts);
 
     netRent =
@@ -116,7 +125,7 @@ $(document).ready(function() {
       parseInt(renovationCosts);
     console.log("total year one costs: " + yearOneCost);
 
-    yearOneYield = (netRentToFixed / yearOneCost) * 100;
+    yearOneYield = (netRentToFixed / yearOneCost) * 100 || 0;
     console.log("total yield = " + yearOneYield);
 
     // Want to convert the number to only include two decimals.
