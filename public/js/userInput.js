@@ -32,8 +32,7 @@ var address = "";
 var resultsArray = [];
 
 $(document).ready(function() {
-  //   Initial variables
-
+  // Gonna try this addComma function. MAY NEED TO REMOVE THIS LATER.
   $("#submit").on("click", function(event) {
     event.preventDefault();
 
