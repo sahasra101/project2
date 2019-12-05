@@ -40,7 +40,6 @@ require("./routes/addressApiRoutes")(app);
 require("./routes/postApiRoutes")(app);
 require("./routes/htmlRoutes")(app);
 
-
 var syncOptions = { force: false };
 
 // If running a test, set syncOptions.force to true
