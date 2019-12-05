@@ -7,23 +7,19 @@ body {
   font-family: 'Gupter', serif;
 }
 
-form.signup,
 form.login {
-  margin-top: 50px;
-}
+  margin-top: 20px;
+} 
 
 #css-grid {
   display: grid;
   grid-template-columns: 1.5fr 4fr;
-  grid-template-rows: 1fr 1fr;
-  height: 70px;
+  grid-template-rows: auto;
 }
 
 #picture-sidebar {
   grid-column-start: 1;
   grid-column-end: 2;
-  grid-row-start: 1;
-  grid-row-end: 3;
   background-image: url("/img/sign_n_log.jpg");
   background-size: cover;
   background-position-x: 40%;
@@ -37,7 +33,7 @@ form.login {
   grid-column-start: 2;
   grid-column-end: 3;
   margin-left: 40px;
-  margin-top: 50px;
+  margin-top: 30px;
 }
 
 label {
@@ -56,4 +52,12 @@ input {
   padding: 6px;
   text-transform: uppercase;
   letter-spacing: 1px;
+}
+
+#logo {
+  height: 80px;
+  width: 200px;
+  margin-bottom: 24px;
+  border-radius: 26px;
+  border: 2px solid rgb(132, 105, 230);
 }
