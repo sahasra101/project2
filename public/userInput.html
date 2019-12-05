@@ -102,13 +102,11 @@
                             placeholder="Use 5 if you're not sure">
                     </div>
 
-
                     <div class="form-group">
                         <label for="clo-cost">Closing Costs</label>
                         <input type="text" class="form-control" id="closingCosts"
                             placeholder="Use 3% of the total purchase price if you're not sure">
                     </div>
-
 
                     <button type="button" class="form-button" id="submit"> Submit</button>
 
@@ -116,7 +114,6 @@
                 </form>
             </div>
         </div>
-    
 
 
 
@@ -131,17 +128,26 @@
                         
             <div id="zillow-display"></div>
 
-        </div>
+        <div id="zillow-and-map-container">
+            <div id="zillow-api">
 
-        <div id="map-container">
-            <span id="map-heading-container">
+                <span id="zillow-heading-container">
+                    <h2 id="zillow-head">Zillow Search Results</h2>
+                </span>
+
+                <div id="zillow-display"></div>
+
+            </div>
+
+            <div id="map-container">
+                <span id="map-heading-container">
                     <h2 id="map-head">Address Location</h2>
                 </span>
-                                
-            <div id="map"></div>
+
+                <div id="map"></div>
+            </div>
         </div>
     </div>
-</div>
     <script src="js/userInput.js" type="text/javascript">
 
 
