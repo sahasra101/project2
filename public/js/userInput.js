@@ -58,6 +58,9 @@ $(document).ready(function() {
     $.post("/api/address", addZillow, function(data) {
       console.log("zillow api data: ", data);
       // data should be the relevant info from the Zillow API call
+
+      $("#zillow-display").empty();
+
       $("#zillow-display").append(
         "<p id='rent-est'>RestZestimate: " + data.rentzestimate + "</p>"
       );
