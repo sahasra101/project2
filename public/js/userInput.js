@@ -37,6 +37,8 @@ $(document).ready(function() {
   $("#submit").on("click", function(event) {
     event.preventDefault();
 
+    $("#zillow-display").empty();
+
     address = $("#street-address")
       .val()
       .trim();
@@ -59,31 +61,35 @@ $(document).ready(function() {
       console.log("zillow api data: ", data);
       // data should be the relevant info from the Zillow API call
 
-      $("#zillow-display").empty();
-
-      $("#zillow-display").append(
-        "<br><p id='rent-est'>Purchase Price RentZestimate&#0174 (per month): $" +
-          data.rentzestimate.amount +
-          "</p><p id='rent-est-range'>Range RentZestimate Low to High: " +
-          data.rentzestimate.valuationRange.low +
-          " to " +
-          data.rentzestimate.valuationRange.high +
-          "</p>"
-      );
-      $("#zillow-display").append(
-        "<p id='est'>Zestimate&#0174: $" +
-          data.zestimate.amount +
-          "</p><p id='est-range'>Valuation Range Low to High: " +
-          data.zestimate.valuationRange.low +
-          " to " +
-          data.zestimate.valuationRange.high +
-          "</p>"
-      );
-      $("#zillow-display").append(
-        "<p id='zillow-url'>Zillow Info: <a href='" +
-          data.homeDetailsURL +
-          "' target='_blank'>Zillow Details</a></p>"
-      );
+      if (data !== "Error, no result") {
+        $("#zillow-display").append(
+          "<br><p id='rent-est'>RentZestimate: " +
+            data.rentzestimate.amount +
+            "</p><p id='rent-est-range'>Range RentZestimate Low to High: " +
+            data.rentzestimate.valuationRange.low +
+            " to " +
+            data.rentzestimate.valuationRange.high +
+            "</p>"
+        );
+        $("#zillow-display").append(
+          "<p id='est'>Zestimate: " +
+            data.zestimate.amount +
+            "</p><p id='est-range'>Valuation Range Low to High: " +
+            data.zestimate.valuationRange.low +
+            " to " +
+            data.zestimate.valuationRange.high +
+            "</p>"
+        );
+        $("#zillow-display").append(
+          "<p id='zillow-url'>Zillow Info: <a href='" +
+            data.homeDetailsURL +
+            "' target='_blank'>Zillow Details</a></p>"
+        );
+      } else {
+        $("#zillow-display").append(
+          "<p id='error-message'><em>Zillow did not match your address with a property</em></p>"
+        );
+      }
     });
 
     purchasePrice =
