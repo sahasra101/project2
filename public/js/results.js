@@ -1,5 +1,5 @@
 $(document).ready(function() {
-  // START HERE WITH NEW STUFF 
+  // START HERE WITH NEW STUFF
   console.log("--------------");
   $(document).on("click", ".saveSearch", function(event) {
     event.preventDefault();
