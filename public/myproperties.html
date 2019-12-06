@@ -69,11 +69,11 @@
 
         var tBody = $("<tbody>");
         var tRow = $("<tr>");
-        var td = $("<td>" + data[i].address + "</td>");
-        var td2 = $("<td>" + "$" + data[i].initialInvestment + "</td>");
-        var td3 = $("<td>" + "$" + data[i].yearOneReturn + "</td>");
+        var td = $("<td class='addressHeader'>" + data[i].address + "</td>");
+        var td2 = $("<td class='investmentHeader'>" + "$" + data[i].initialInvestment + "</td>");
+        var td3 = $("<td class='yearOneReturnHeader'>" + "$" + data[i].yearOneReturn + "</td class='yieldHeader'>");
         var td4 = $("<td>" + data[i].yield + "%" + "</td>");
-
+        
         tRow.append(td, td2, td3, td4);
         tBody.append(tRow);
         resultsTable.append(tBody);
