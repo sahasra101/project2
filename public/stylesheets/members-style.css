@@ -33,6 +33,7 @@ header {
   text-decoration: none;
   color: black;
   padding: 0px 7px 0px 7px;
+  font-size: 12px;
 }
 
 .nav-link:hover {
@@ -53,13 +54,13 @@ header {
 #logo {
   height: 40px;
   width: 150px;
-  margin-bottom: 12px;
+  margin-bottom: 6px;
   border-radius: 26px;
   border: 2px solid rgb(132, 105, 230);
   grid-column-start: 2;
   grid-column-end: 3;
   justify-self: center;
-  margin-top: 6px;
+  margin-top: 3px;
 }
 
 #logo-link {
@@ -97,6 +98,7 @@ header {
   color: white;
   -webkit-text-stroke: .1px rgb(80, 60, 60); 
   font-family: 'Lalezar', cursive;
+  text-shadow: 1px 1px 3px black; 
 }
 
 h3 {
@@ -108,6 +110,7 @@ h3 {
   -webkit-text-stroke: .3px rgb(17, 16, 16); 
   font-family: 'Lalezar', cursive;
   margin-top: 6px;
+  text-shadow: 1px 1px 4.5px black; 
 }
 
 #buttons {

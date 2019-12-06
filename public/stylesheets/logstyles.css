@@ -13,19 +13,21 @@ form.login {
 
 #css-grid {
   display: grid;
-  grid-template-columns: 1.5fr 4fr;
+  grid-template-columns: .8fr 4fr;
   grid-template-rows: auto;
 }
 
 #picture-sidebar {
   grid-column-start: 1;
   grid-column-end: 2;
+  /* grid-row-start: 1;
+  grid-row-end: 2; */
   background-image: url("/img/sign_n_log.jpg");
   background-size: cover;
   background-position-x: 40%;
   background-repeat: no-repeat;
   width: 100%;
-  height: 500px;
+  height: 140%;
   border-right: 8px solid rgb(116, 90, 90);
 }
 

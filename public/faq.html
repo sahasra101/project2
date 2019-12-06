@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Rentable FAQ</title>
+    <link href="https://fonts.googleapis.com/css?family=Gupter&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="stylesheets/faqstyles.css">
+</head>
+
+<body>
+
+    <header>
+        <span id="left-nav">
+            <a class="nav-link" href="/userinput">New Search</a>
+            <a class="nav-link" href="/myproperties">My Properties</a>
+        </span>
+
+        <a id="logo-link" href="/members"><img id="logo" src="/img/logo.jpg" alt="Rentable Logo"></a>
+
+        <span id="right-nav">
+            <a class="nav-link" href="/faq">FAQ</a>
+            <a class="nav-link" href="/logout">Logout</a>
+        </span>
+
+    </header>
+
+
+    <div id="css-grid">
+
+        <div id="side-nav">
+            <a href="#purchase-price" class="side-nav-link">Purchase Price</a>
+            <a href="#pro-mon-rent" class="side-nav-link">Projected Rent</a>
+            <a href="#year-tax" class="side-nav-link">Yearly Tax</a>
+            <a href="#year-main-cost" class="side-nav-link">Yearly Maintenance Cost</a>
+            <a href="#ren-cost" class="side-nav-link">Renovation Cost</a>
+            <a href="#insurance" class="side-nav-link">Homeowner's Insurance</a>
+            <a href="#utilities" class="side-nav-link">Utilities</a>
+            <a href="#vac-rate" class="side-nav-link">Vacancy Rate</a>
+            <a href="#clo-cost" class="side-nav-link">Closing Cost</a>
+        </div>
+
+        <div id="all-faqs">
+
+            <h1 id="faq-head">Rentable FAQ</h1>
+
+            <div id="purchase-price" name="purchase-price" class="faq-container">
+
+                <div class="header-container">
+                    <h2>Purchase Price</h2>
+                </div>
+
+                <div class="definition">
+                    <b>Definition: </b>The amount the buyer pays for the property.
+                </div>
+
+
+                <div class="explanation">
+                    <b>How it Applies: </b>The purchase price is combined with all closing costs and any renovation
+                    costs to
+                    make up the initial investment. These are up front, one time costs, as opposed to recurring costs
+                    like
+                    taxes, utilities, repairs, etc. The initial investment is compared to the net rent to determine the
+                    yield.
+                </div>
+
+
+                <div class="tips">
+                    <b>Tips: </b> Adjust the purchase price up and down while keeping all other variables the same to
+                    get a
+                    clear picture of how the purchase price is affecting your yield.
+                </div>
+
+            </div>
+
+            <div id="pro-mon-rent" name="pro-mon-rent" class="faq-container">
+
+                <div class="header-container">
+                    <h2>Projected Rent</h2>
+                </div>
+
+                <div class="definition">
+                    <b>Definition:</b>The total monthly payment collected for use of the property.
+                </div>
+
+
+                <div class="explanation">
+                    <b>How it Applies:</b>Your projected monthly rent input will automatically be multiplied by twelve
+                    to
+                    determine the yearly rent. The recurring costs are then subtracted from the yearly rent. Those costs
+                    include property taxes, utilities, repair and maintenance, insurance, and any other recurring costs.
+                    The
+                    yearly rental rate minus all of those recurring costs equals the net yearly rental rate. That number
+                    is
+                    then divided by the total.
+                </div>
+
+                <!-- calcbox here -->
+
+                <div class="tips">
+                    <b>Tips: </b>Adjust the projected rent up and down while keeping all other variables the same to get
+                    a
+                    clear picture of how the projected rent is affecting your yield. Be sure to include all income the
+                    property produces, including, e.g., laundry income or vending machine income.
+                </div>
+
+            </div>
+
+            <div id="year-tax" name="year-tax" class="faq-container">
+
+                <div class="header-container">
+                    <h2>Yearly Taxes</h2>
+                </div>
+
+                <div class="definition">
+                    <b>Definition:</b>The total yearly property taxes owed.
+                </div>
+
+
+                <div class="explanation">
+                    <b>How it Applies:</b>Yearly Taxes are subtracted from Yearly Rent (along with other recurring
+                    costs) to
+                    determine net yearly rent.
+                </div>
+
+                <!-- calcbox here -->
+
+                <div class="tips">
+                    <b>Tips: </b>The property taxes are typically available on local municipal websites. Not all tax
+                    rates
+                    are the same, so determining the local rate on a potential investment is important. Depending on
+                    the region, tax abatements (or other tax reduction programs) may be available, which can affect the
+                    yearly Tax. If you can't find the Yearly Tax anywhere, use 1% of the total purchase price as an
+                    estimate.
+                </div>
+
+            </div>
+
+            <div id="year-main-cost" name="year-main-cost" class="faq-container">
+
+                <div class="header-container">
+                    <h2>Yearly Maintenance Cost</h2>
+                </div>
+
+                <div class="definition">
+                    <b>Definition:</b>The total amount spent per year on costs towards upkeep of the property.
+                </div>
+
+                <div class="explanation">
+                    <b>How it Applies:</b>Yearly Maintenance Costs are subtracted from Yearly Rent (along with other
+                    recurring costs) to determine Net Yearly Rent.
+                </div>
+
+                <!-- calcbox here -->
+
+                <div class="tips">
+                    <b>Tips: </b> Yearly Maintenance can be tough to predict. Typically newer properties require less
+                    maintenance due to newer systems (such as HVAC). If you aren't sure of the potential cost, use 1% of
+                    the
+                    total projected purchase price.
+                </div>
+
+            </div>
+
+            <div id="ren-cost" name="ren-cost" class="faq-container">
+
+                <div class="header-container">
+                    <h2>Renovation Costs</h2>
+                </div>
+
+                <div class="definition">
+                    <b>Definition:</b>The upfront costs used towards the improvement of the Property.
+                </div>
+
+                <div class="explanation">
+                    <b>How it Applies:</b>Renovation Costs are a one time, upfront cost. They are added to the purchase
+                    price (along with any closing costs) to determine the initial investment. As the renovation costs
+                    only
+                    happen once, they do not affect the Net Yearly Rent.
+                </div>
+
+                <!-- calcbox here -->
+
+                <div class="tips">
+                    <b>Tips:</b> Not all investments require renovation costs. If the property is already in good
+                    condition, the renovation costs may be zero. Also, often buyers will receive a credit towards
+                    maintenance repairs as part of the agreement of sale (depending on the nature of the transaction).
+                    If
+                    you aren't sure of the potential renovation costs, leave it as zero.
+                </div>
+
+            </div>
+
+            <div id="insurance" name="insurance" class="faq-container">
+
+                <div class="header-container">
+                    <h2>Homeowners Insurance</h2>
+                </div>
+
+                <div class="definition">
+                    <b>Definition:</b>The yearly cost applied to insuring the Property.
+                </div>
+
+                <div class="explanation">
+                    <b>How it Applies:</b>Insurance is a yearly recurring cost, so it is subtracted from the Yearly Rent
+                    (along with any other recurring costs) to determine Net Yearly Rent.
+                </div>
+
+                <!-- calcbox here -->
+
+                <div class="tips">
+                    <b>Tips:</b> While insurance isn't technically required, most investments are insured (and if you
+                    intend
+                    to use a mortgage to purchase the property, you will be required to have insurance). If you aren't
+                    sure
+                    of the potential insurance costs, use .0025% of the property. For example, if the Projected Purchase
+                    price is $400,000, expect insurance to cost somewhere around $1,250. However, many factors can
+                    affect
+                    your actual rate, such as location, residential/commercial, nature of the investment, etc.
+                </div>
+
+            </div>
+
+            <div id="utilities" name="utilities" class="faq-container">
+
+                <div class="header-container">
+                    <h2>Utilities</h2>
+                </div>
+
+                <div class="definition">
+                    <b>Definition:</b>The monthly costs paid by the owner of the property, rather than the tenant.
+                </div>
+
+                <div class="explanation">
+                    <b>How it Applies:</b>Utilities are a recurring cost subtracted from the Yearly Rent (along with
+                    other
+                    recurring costs) to determine the Net Yearly Rent. Your monthly utility input will automatically be
+                    multiplied by twelve to determine the yearly utility costs.
+                </div>
+
+                <!-- calcbox here -->
+
+                <div class="tips">
+                    <b>Tips:</b>Utilities are often paid by the tenant, but occasionally the investor will pay some or
+                    all
+                    of the utilities. If you aren't sure of the potential utility costs, leave them at zero.
+                </div>
+
+            </div>
+
+            <div id="vac-rate" name="vac-rate" class="faq-container">
+
+                <div class="header-container">
+                    <h2>Vacancy Rate</h2>
+                </div>
+
+                <div class="definition">
+                    <b>Definition:</b>The percentage of time that the Property is not occupied by a tenant and is not
+                    producing rent.
+                </div>
+
+                <div class="explanation">
+                    <b>How it Applies:</b>The Vacancy Rate percentage is multiplied by the total rental revenue. That
+                    number
+                    is then subtracted from the total rental revenue. Think of it as the Vacancy Rate accounting for the
+                    months that you aren't collecting any rent.
+                </div>
+
+                <!-- calcbox here -->
+
+                <div class="tips">
+                    <b>Tips:</b>Vacancy rate can be tough to predict and often depends on the nature of the property.
+                    For
+                    some context, one momnth of vacancy per year is a vacancy rate of roughly 8.33%. If you aren't sure
+                    of
+                    the potential vacancy rate, use 8.33%.
+                </div>
+
+            </div>
+
+            <div id="clo-cost" name="clo-cost" class="faq-container">
+
+                <div class="header-container">
+                    <h2>Closing Costs</h2>
+                </div>
+
+                <div class="definition">
+                    <b>Definition:</b>The extra costs associated with purchasing the Property, such as transfer tax,
+                    mortgage fees, title fees,etc. They are essentially all the one time costs that aren't accounted for
+                    the
+                    Purchase Price and the Renovation Costs.
+                </div>
+
+                <div class="explanation">
+                    <b>How it Applies:</b>Closing costs are a one time cost, so they apply to the initial investment (as
+                    opposed to reoccuring costs, which apply to the Yearly Rent). The closing costs are combined with
+                    the
+                    Purchase Price and the Renovation Cost, collectively making up the Initial Investment.
+                </div>
+
+                <!-- calcbox here -->
+
+                <div class="tips">
+                    <b>Tips:</b>Closing costs depend on the nature of the transaction. If the purchase is unleveraged
+                    (meaning there is no mortgage involved), the closing costs should be significantly reduced. Also,the
+                    transfer tax (which is completely separate from the yearly property tax) is likely to be the largest
+                    of
+                    the closing costs, so determining the local transfer tax rate is a good place to start when
+                    determining
+                    the projected closing costs. If you aren't sure of the potential closing costs, use 3% of the total
+                    purchase price.
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+    <script>
+
+        $(function () {
+
+            var $sidebar = $("#side-nav"),
+                $window = $(window),
+                offset = $sidebar.offset(),
+                topPadding = 100;
+
+            $window.scroll(function () {
+                if ($window.scrollTop() > offset.top) {
+                    $sidebar.stop().animate({
+                        marginTop: $window.scrollTop() - offset.top + topPadding
+                    });
+                } else {
+                    $sidebar.stop().animate({
+                        marginTop: 50
+                    });
+                }
+            });
+
+        });
+
+    </script>
+
+</body>
+
+</html>

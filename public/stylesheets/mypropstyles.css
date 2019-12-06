@@ -21,7 +21,7 @@ body {
 header {
   background-color: white;
   display: grid;
-  grid-template-columns: 2fr 2fr 2fr;
+  grid-template-columns: 2fr auto 2fr;
   grid-row-start: 1;
   grid-row-end: 2;
   grid-column-start: 1;
@@ -41,6 +41,7 @@ header {
   color: black;
   padding: 0px 7px 0px 7px;
   display: inline;
+  font-size: 12px;
 }
 
 .nav-link:hover {
@@ -51,13 +52,13 @@ header {
 #logo {
   height: 40px;
   width: 150px;
-  margin-bottom: 12px;
+  margin-bottom: 6px;
   border-radius: 26px;
   border: 2px solid rgb(132, 105, 230);
   grid-column-start: 2;
   grid-column-end: 3;
   justify-self: center;
-  margin-top: 6px;
+  margin-top: 3px;
 }
 
 #logo-link {
