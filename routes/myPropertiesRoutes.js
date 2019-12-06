@@ -35,14 +35,16 @@ module.exports = function(app) {
     });
   });
 
-  // app.delete("/api/address/:id", function(req, res) {
-  //   // Delete the Address with the id available to us in req.params.id
-  //   db.Address.destroy({
-  //     where: {
-  //       id: req.params.id
-  //     }
-  //   }).then(function(dbAddress) {
-  //     res.json(dbAddress);
-  //   });
-  // });
+  app.delete("/api/property/:id", function(req, res) {
+    // Delete the Address with the id available to us in req.params.id
+    db.propertie
+      .destroy({
+        where: {
+          id: req.params.id
+        }
+      })
+      .then(function(dbAddress) {
+        res.json(dbAddress);
+      });
+  });
 };
