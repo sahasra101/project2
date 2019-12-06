@@ -238,7 +238,9 @@ function geocodeAddress(geocoder, resultsMap) {
         position: results[0].geometry.location
       });
     } else {
-      alert("Geocode was not successful for the following reason: " + status);
+      $("#map-heading-container").append(
+        "<h5 id='map-error'> No map results available for that address.</h5>"
+      );
     }
   });
   // eslint-disable-next-line prettier/prettier
