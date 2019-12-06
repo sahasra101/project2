@@ -29,7 +29,7 @@ module.exports = function(app) {
   app.post("/api/property", function(req, res) {
     // Create an Address with the data available to us in req.body
     req.body.userID = req.user.id;
-    console.log(req.body);
+    console.log("----------", req.body);
     db.propertie.create(req.body).then(function(dbProperty) {
       res.json(dbProperty);
     });
