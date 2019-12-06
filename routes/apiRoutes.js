@@ -51,20 +51,25 @@ module.exports = function(app) {
     var z = new Zillow("X1-ZWz17idc5wq96z_6ikyi");
 
     z.get("GetSearchResults", params).then(function(results) {
-      var relInfo = {
-        streetAdd: results.response.results.result.address.street,
-        cityAdd: results.response.results.result.address.city,
-        stateAdd: results.response.results.result.address.state,
-        zipAdd: results.response.results.result.address.zipcode,
-        lat: results.response.results.result.address.latitude,
-        lng: results.response.results.result.address.longitude,
-        // zestimate: results.response.results.result.zestimate.amount,
-        // rentzestimate: results.response.results.result.rentzestimate.amount,
-        zestimate: results.response.results.result.zestimate,
-        rentzestimate: results.response.results.result.rentzestimate,
-        homeDetailsURL: results.response.results.result.links.homedetails
-      };
-      res.json(relInfo);
+      console.log("Results: ", results);
+      if (results.message.code !== "508") {
+        var relInfo = {
+          streetAdd: results.response.results.result.address.street,
+          cityAdd: results.response.results.result.address.city,
+          stateAdd: results.response.results.result.address.state,
+          zipAdd: results.response.results.result.address.zipcode,
+          lat: results.response.results.result.address.latitude,
+          lng: results.response.results.result.address.longitude,
+          // zestimate: results.response.results.result.zestimate.amount,
+          // rentzestimate: results.response.results.result.rentzestimate.amount,
+          zestimate: results.response.results.result.zestimate,
+          rentzestimate: results.response.results.result.rentzestimate,
+          homeDetailsURL: results.response.results.result.links.homedetails
+        };
+        res.json(relInfo);
+      } else {
+        res.send("Error, no result");
+      }
     });
   });
 };
