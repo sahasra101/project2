@@ -38,6 +38,7 @@ $(document).ready(function() {
     event.preventDefault();
 
     $("#zillow-display").empty();
+    $("#map-error").empty();
 
     address = $("#street-address")
       .val()
@@ -244,9 +245,7 @@ function geocodeAddress(geocoder, resultsMap) {
         position: results[0].geometry.location
       });
     } else {
-      $("#map-heading-container").append(
-        "<h5 id='map-error'> No map results available for that address.</h5>"
-      );
+      $("#map-error").append("No map results available for that address.");
     }
   });
   // eslint-disable-next-line prettier/prettier
