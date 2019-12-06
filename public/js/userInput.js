@@ -62,10 +62,22 @@ $(document).ready(function() {
       $("#zillow-display").empty();
 
       $("#zillow-display").append(
-        "<p id='rent-est'>RestZestimate: " + data.rentzestimate + "</p>"
+        "<br><p id='rent-est'>RentZestimate: " +
+          data.rentzestimate.amount +
+          "</p><p id='rent-est-range'>Range RentZestimate Low to High: " +
+          data.rentzestimate.valuationRange.low +
+          " to " +
+          data.rentzestimate.valuationRange.high +
+          "</p>"
       );
       $("#zillow-display").append(
-        "<p id='est'>Zestimate: " + data.zestimate + "</p>"
+        "<p id='est'>Zestimate: " +
+          data.zestimate.amount +
+          "</p><p id='est-range'>Valuation Range Low to High: " +
+          data.zestimate.valuationRange.low +
+          " to " +
+          data.zestimate.valuationRange.high +
+          "</p>"
       );
       $("#zillow-display").append(
         "<p id='zillow-url'>Zillow Info: <a href='" +
