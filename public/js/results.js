@@ -1,6 +1,4 @@
 $(document).ready(function() {
-  // START HERE WITH NEW STUFF
-  console.log("--------------");
   $(document).on("click", ".saveSearch", function(event) {
     event.preventDefault();
     var saveId = $(this).attr("data-id");
