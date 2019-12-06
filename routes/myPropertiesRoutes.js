@@ -1,15 +1,15 @@
 var db = require("../models");
 
-module.exports = function (app) {
+module.exports = function(app) {
   // Find all addresses and return them to the user with res.json
-  app.get("/api/property", function (req, res) {
+  app.get("/api/property", function(req, res) {
     db.propertie
       .findAll({
         where: {
           userID: req.user.id
         }
       })
-      .then(function (dbProperty) {
+      .then(function(dbProperty) {
         res.json(dbProperty);
       });
   });
@@ -26,11 +26,11 @@ module.exports = function (app) {
   // });
 
   // eslint-disable-next-line no-unused-vars
-  app.post("/api/property", function (req, res) {
+  app.post("/api/property", function(req, res) {
     // Create an Address with the data available to us in req.body
     req.body.userID = req.user.id;
     console.log("----------", req.body);
-    db.propertie.create(req.body).then(function (dbProperty) {
+    db.propertie.create(req.body).then(function(dbProperty) {
       res.json(dbProperty);
     });
   });
