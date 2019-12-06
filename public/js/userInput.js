@@ -31,6 +31,8 @@ var address = "";
 // The results array that we push the button results to.
 var resultsArray = [];
 
+var cityStateOrZip;
+
 $(document).ready(function() {
   $("#submit").on("click", function(event) {
     event.preventDefault();
