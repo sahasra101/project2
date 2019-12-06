@@ -62,7 +62,7 @@ $(document).ready(function() {
       $("#zillow-display").empty();
 
       $("#zillow-display").append(
-        "<br><p id='rent-est'>RentZestimate&#0174 (per month): $" +
+        "<br><p id='rent-est'>Purchase Price RentZestimate&#0174 (per month): $" +
           data.rentzestimate.amount +
           "</p><p id='rent-est-range'>Range RentZestimate Low to High: " +
           data.rentzestimate.valuationRange.low +
