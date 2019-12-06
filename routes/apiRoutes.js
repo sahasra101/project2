@@ -58,8 +58,10 @@ module.exports = function(app) {
         zipAdd: results.response.results.result.address.zipcode,
         lat: results.response.results.result.address.latitude,
         lng: results.response.results.result.address.longitude,
-        zestimate: results.response.results.result.zestimate.amount,
-        rentzestimate: results.response.results.result.rentzestimate.amount,
+        // zestimate: results.response.results.result.zestimate.amount,
+        // rentzestimate: results.response.results.result.rentzestimate.amount,
+        zestimate: results.response.results.result.zestimate,
+        rentzestimate: results.response.results.result.rentzestimate,
         homeDetailsURL: results.response.results.result.links.homedetails
       };
       res.json(relInfo);
