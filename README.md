@@ -18,7 +18,7 @@ C. View Zillow estimates and Google Map results for that property.
 D. View property calculations given the user input. 
 E. Adjust any input fields and receive adjusted calculations. 
 F. Save any property search. 
-G. Access saved searches on a separate page. 
+G. Access saved searches on a separate My Properties page. 
 H. Delete any saved searches to clear up the page. 
 I. Read FAQs to explain the real estate terms used in the app. 
 
@@ -26,13 +26,13 @@ I. Read FAQs to explain the real estate terms used in the app.
 
 A. Passport.js allows the user to create an email login and reaccess their account anytime they revisit the app. 
 B. HTML input field submissions values are captured using JQuery. 
-C. The address field submissions and submit button trigger API calls to both Zillow and Google Maps. The Zillow API provides a range of rental zestimates and the purchase price zestimate, providing the user context for their input values.
-D. Backend javascript equations apply the input values to determine three variables: Initial Investment, Year One Return, and Year One Yield. 
-E. Since the user input values don't empty (by design), the user can change one aspect of their submission (for example, renovation costs) and get different outcomes. This allows the user to make adjustments with each variable while controlling for the rest of the fields, making it easy to see how small changes to the investment affect the outcomes. The outcomes are presented in a small results table.
-F. A save button triggers a jquery onclick, moving the contents of the results table to a separate myproperties page. 
-G. The page uses passport.js and a MYSQL database (with a JAWSDB extension on the heroku deployment) to store the user's saved properties. 
+C. The address field submissions and submit button trigger API calls to both Zillow and Google Maps. The Zillow API provides a range of rental zestimates and the purchase price zestimate, providing the user context for their input values. The Google Maps API provides a pin at the address location. 
+D. Backend equations apply to the input values to determine three variables: Initial Investment, Year One Return, and Year One Yield. 
+E. Since the user input values don't automatically empty following the submit button click (by design), the user can change one aspect of their submission (for example, renovation costs) and get different outcomes. This allows the user to make adjustments with each variable while controlling for the rest of the fields, making it easy to see how small changes to the property costs affect the outcomes. The outcomes are presented in a small results table.
+F. A save button triggers a jquery onclick, moving the contents of the results table to a separate My Properties page. 
+G. The page uses passport.js and a MYSQL database (with a JAWSDB extension on heroku) to store the user's saved properties. 
 H. A delete button triggers an onclick event removing the property from the database. 
-I. We wanted anyone to be able to use the app, not only investors well versed in real estate investment terminology. The FAQ page can be accessed using info icons that align with each term. Clicking any of the info icons will open a separate page and automatically align the user's view with the placement of the relevant term on the FAQ page. 
+I. We wanted anyone to be able to use the app, not only investors versed in real estate terminology. The FAQ page can be accessed using info icons that align with each term. Clicking any of the info icons will open a separate page and automatically align the user's view with the placement of the relevant term on the FAQ page. 
 
 3. To tun the APP: 
 
