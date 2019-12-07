@@ -38,6 +38,7 @@ $(document).ready(function() {
     event.preventDefault();
 
     $("#zillow-display").empty();
+    $("#map-error").empty();
 
     address = $("#street-address")
       .val()
@@ -63,7 +64,7 @@ $(document).ready(function() {
 
       if (data !== "Error, no result") {
         $("#zillow-display").append(
-          "<br><p id='rent-est'>RentZestimate: " +
+          "<br><p id='rent-est'>RentZestimate: $" +
             data.rentzestimate.amount +
             "</p><p id='rent-est-range'>Range RentZestimate Low to High: " +
             data.rentzestimate.valuationRange.low +
@@ -72,7 +73,7 @@ $(document).ready(function() {
             "</p>"
         );
         $("#zillow-display").append(
-          "<p id='est'>Zestimate: " +
+          "<p id='est'>Zestimate: $" +
             data.zestimate.amount +
             "</p><p id='est-range'>Valuation Range Low to High: " +
             data.zestimate.valuationRange.low +
@@ -244,9 +245,7 @@ function geocodeAddress(geocoder, resultsMap) {
         position: results[0].geometry.location
       });
     } else {
-      $("#map-heading-container").append(
-        "<h5 id='map-error'> No map results available for that address.</h5>"
-      );
+      $("#map-error").append("No map results available for that address.");
     }
   });
   // eslint-disable-next-line prettier/prettier
