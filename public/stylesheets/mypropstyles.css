@@ -22,10 +22,6 @@ header {
   background-color: white;
   display: grid;
   grid-template-columns: 2fr auto 2fr;
-  grid-row-start: 1;
-  grid-row-end: 2;
-  grid-column-start: 1;
-  grid-column-end: 4;
   border-bottom: 1px solid grey;
   padding: 15px 0px 10px 0px;
   height: 83px;
@@ -42,7 +38,7 @@ header {
   color: black;
   padding: 0px 7px 0px 7px;
   display: inline;
-  font-size: 12px;
+  font-size: 16px;
 }
 
 .nav-link:hover {
@@ -51,15 +47,16 @@ header {
 }
 
 #logo {
-  height: 40px;
-  width: 150px;
+  height: 44px;
+  width: 154px;
+  margin-bottom: 6px;
   border-radius: 26px;
   border: 2px solid rgb(132, 105, 230);
   grid-column-start: 2;
   grid-column-end: 3;
   justify-self: center;
   align-self: center;
-  margin-right: 16px;
+  margin-top: 3px;
 }
 
 #logo-link {
@@ -89,7 +86,7 @@ header {
   grid-column-start: 2;
   grid-column-end: 3;
   display: grid;
-  grid-template-rows: .5fr 2fr;
+  grid-template-rows: .4fr 2fr;
   background-color: white;
   border-radius: 12px;
   margin-top: 54px;
@@ -100,10 +97,37 @@ header {
   grid-row-end: 2;
   justify-self: center;
   color: rgb(116, 75, 192);
-  margin-top: 14px;
+  margin-top: 26px;
 }
 
 #my-properties-output {
   grid-row-start: 2;
   grid-row-end: 3;
+  padding: 0px 30px 30px 30px;
+}
+
+.delete {
+  padding: 10px;
+  background-color: rgb(116, 75, 192);
+  color: white;
+  border-radius: 8px;
+  border: .5px solid rgb(71, 83, 252);
+  margin: 0px 8px 0px 8px;
+}
+
+.delete:hover {
+  color: rgb(97, 97, 245);
+  background-color: rgb(224, 206, 206);
+  border: .5px solid rgb(97, 97, 245);
+  transition: all 1s ease;
+}
+
+.delete:focus {
+  padding: 10px;
+  background-color: rgb(116, 75, 192);
+  color: white;
+  border-radius: 8px;
+  border: .5px solid rgb(71, 83, 252);
+  margin: 0px 8px 0px 8px;
+  outline: none;
 }
