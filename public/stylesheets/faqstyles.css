@@ -11,12 +11,8 @@ header {
   background-color: white;
   display: grid;
   grid-template-columns: 2fr auto 2fr;
-  grid-row-start: 1;
-  grid-row-end: 2;
-  grid-column-start: 1;
-  grid-column-end: 4;
   border-bottom: 1px solid grey;
-  padding: 15px 0px 10px 8px;
+  padding: 15px 0px 10px 0px;
 }
 
 #left-nav {
@@ -29,7 +25,7 @@ header {
   text-decoration: none;
   color: black;
   padding: 0px 7px 0px 7px;
-  font-size: 12px;
+  font-size: 16px;
 }
 
 .nav-link:hover {
@@ -98,9 +94,16 @@ header {
   grid-gap: 25px 0px;
 }
 
-.faq-container {
+.faq-container-pp {
   display: grid;
   grid-template-rows: repeat(5, auto);
+  grid-gap: 8px 0px;
+  line-height: 1.5;
+}
+
+.faq-container {
+  display: grid;
+  grid-template-rows: repeat(6, auto);
   grid-gap: 8px 0px;
   line-height: 1.5;
 }
@@ -115,6 +118,32 @@ h1, h2 {
 
 .explanation, .definition, .tips {
   margin-left: 16px;
+}
+
+.equation {
+  display: grid;
+  grid-template-columns: .3fr auto 1.7fr;
+}
+
+.equation-container {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  margin: 8px 0px 8px 0px;
+  border: .5px solid black;
+  background-color: rgb(235, 230, 202);
+  padding: 10px;
+}
+
+.small-width {
+  width: 300px
+}
+
+.med-width {
+  width: 500px; 
+}
+
+.large-width {
+  width: 650px;
 }
 
 #faq-head {
