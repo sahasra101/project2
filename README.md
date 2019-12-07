@@ -34,7 +34,7 @@ G. The page uses passport.js and a MYSQL database (with a JAWSDB extension on he
 H. A delete button triggers an onclick event removing the property from the database. 
 I. We wanted anyone to be able to use the app, not only investors versed in real estate terminology. The FAQ page can be accessed using info icons that align with each term. Clicking any of the info icons will open a separate page and automatically align the user's view with the placement of the relevant term on the FAQ page. 
 
-3. To tun the APP: 
+3. To use the APP: 
 
 A. Login to the app using an email. If you don't have a login yet, use your email to create one. 
 
@@ -54,7 +54,7 @@ F. Read through the FAQ page (which can be accessed by clicking any of the info 
 - javascript
 - jquery
 - Bootstrap (for the results tables only)
-- mysql 
+- mySQL 
 - JawsDB 
 - Heroku 
 - Zillow API 
@@ -64,3 +64,4 @@ F. Read through the FAQ page (which can be accessed by clicking any of the info 
     - Body-Parser  
     - session 
     - sequelize 
+    - node-zillow
