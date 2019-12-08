@@ -223,7 +223,7 @@ $(document).ready(function() {
 function initMap() {
   var map = new google.maps.Map(document.getElementById("map"), {
     zoom: 13,
-    center: { lat: 40.139, lng: -75.212611 }
+    center: { lat: 39.94, lng: -75.199 }
   });
   var geocoder = new google.maps.Geocoder();
 
