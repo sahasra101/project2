@@ -58,7 +58,7 @@ header {
   grid-column-end: 4;
   align-self: center;
   justify-self: end;
-  padding-right: 25px;
+  padding-right: 4px;
 }
 
 #big-picture {
@@ -141,6 +141,7 @@ h3 {
   margin: 38px 0px 0px 15px;
   align-self: center;
   margin-bottom: 7px;
+  padding-bottom: 12px;
 }
 
 
@@ -153,8 +154,13 @@ h3 {
   margin-top: 16px;
 }
 
-#built-label {
-  margin-left: 135px;
+#built-by > a {
+  text-decoration: none;
+  color: black;
+}
+
+#built-by >a:hover {
+  text-decoration: underline;
 }
 
 #zillow {
@@ -166,4 +172,20 @@ h3 {
 #google {
   height: 20px;
   width: 50px;
+}
+
+@media screen and (max-width: 670px) {
+
+  #big-picture {
+    grid-template-rows: 1fr .6fr .8fr 3fr;
+  }
+
+  #big-h1 {
+    font-size: 30px;
+  }
+  
+  h3 {
+    font-size: 18px;
+  }
+
 }

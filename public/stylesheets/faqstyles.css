@@ -196,3 +196,78 @@ h1, h2 {
   grid-row-start: 10;
   grid-row-end: 11;
 }
+
+@media screen and (max-width: 1030px) {
+  #css-grid {
+    display: grid;
+    grid-template-columns: .8fr 1fr .2fr;
+  }
+}
+
+@media screen and (max-width: 940px) {
+  #css-grid {
+    display: grid;
+    grid-template-columns: .3fr 1fr;
+  }
+  
+  #side-nav {
+    width: 80%;
+    height: 185px;
+    grid-column-start: 1;
+    grid-column-end: 2;
+  }
+
+  .side-nav-link {
+    font-size: 12px;
+  }
+
+  #all-faqs {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    width: 300px;
+  }
+
+  #faq-head {
+    width: 70%;
+  }
+
+  .faq-container-pp {
+    width: 70%;
+  }
+  
+  .faq-container {
+    width: 70%;
+  }
+}
+
+@media screen and (max-width: 683px) {
+
+  .faq-container-pp {
+    width: 90%;
+  }
+
+  #side-nav {
+    height: 238px;
+  }
+
+  .med-width {
+    width: 400px; 
+  }
+  
+  .large-width {
+    width: 400px;
+  }
+
+}
+
+@media screen and (max-width: 573px) {
+
+  .med-width {
+    width: 327px; 
+  }
+  
+  .large-width {
+    width: 327px;
+  }
+
+}

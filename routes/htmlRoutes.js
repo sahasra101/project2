@@ -32,4 +32,8 @@ module.exports = function(app) {
   app.get("/faq", isAuthenticated, function(req, res) {
     res.sendFile(path.join(__dirname, "../public/faq.html"));
   });
+
+  app.get("/mtd", isAuthenticated, function(req, res) {
+    res.sendFile(path.join(__dirname, "../public/meetthedevs.html"));
+  });
 };
