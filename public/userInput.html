@@ -14,9 +14,30 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="stylesheets/userinputstyles.css">
+    <link rel="stylesheet" href="stylesheets/burger2.css">
 </head>
 
 <body>
+
+    <div class="menu-container">
+        <input type="checkbox" name="toggler" class="toggler">
+        <div class="bun">
+            <div class="burger"></div>
+        </div>
+        <div class="menu">
+            <div>
+                <div>
+                    <ul>
+                        <li><a href="/members">Home</a></li>
+                        <li><a href="/userinput">New Search</a></li>
+                        <li><a href="/myproperties">My Properties</a></li>
+                        <li><a href="/faq">FAQ</a></li>
+                        <li><a href="/logout">Logout</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <header>
         <span id="left-nav">
@@ -56,64 +77,73 @@
                             <input type="text" class="form-control" id="street-address" placeholder="">
                         </div>
                         <div class="form-group search">
-                                <label for="city-state-or-zip">City, State, Zip Code</label>
-                                <input type="text" class="form-control" id="city-state-or-zip" placeholder="">
-                            </div>
+                            <label for="city-state-or-zip">City, State, Zip Code</label>
+                            <input type="text" class="form-control" id="city-state-or-zip" placeholder="">
+                        </div>
                         <div class="form-group searchT">
-                            <label for="purch-price">Purchase Price ($)<a href="/faq#purchase-price" target="_blank"><i class="fas fa-question-circle info"></a></i></label>
+                            <label for="purch-price">Purchase Price ($)<a href="/faq#purchase-price" target="_blank"><i
+                                        class="fas fa-question-circle info"></a></i></label>
                             <input type="number" class="form-control" id="purchasePrice" placeholder="" required>
                         </div>
                         <div class="">
                             <div class="form-group">
-                                <label for="proj-mo-rent">Projected Monthly Rent ($)<a href="/faq#pro-mon-rent" target="_blank"><i class="fas fa-question-circle info"></a></i></label>
+                                <label for="proj-mo-rent">Projected Monthly Rent ($)<a href="/faq#pro-mon-rent"
+                                        target="_blank"><i class="fas fa-question-circle info"></a></i></label>
                                 <input type="number" class="form-control" id="monthlyRent" placeholder="">
                             </div>
                         </div>
                     </div>
                     <div class="form-group">
-                        <label for="year-tax">Yearly Taxes ($)<a href="/faq#year-tax" target="_blank"><i class="fas fa-question-circle info"></a></i></label>
-                        <input type="number" name="taxes" class="form-control" id="yearlyTaxes" placeholder="If unsure, use a number that is 1% of the purchase price.">
+                        <label for="year-tax">Yearly Taxes ($)<a href="/faq#year-tax" target="_blank"><i
+                                    class="fas fa-question-circle info"></a></i></label>
+                        <input type="number" name="taxes" class="form-control" id="yearlyTaxes"
+                            placeholder="If unsure, use a number that is 1% of the purchase price.">
                     </div>
                     <div class="form-group">
-                        <label for="year-main-cost">Yearly Maintenance Cost ($)<a href="/faq#year-main-cost" target="_blank"><i class="fas fa-question-circle info"></a></i></label>
+                        <label for="year-main-cost">Yearly Maintenance Cost ($)<a href="/faq#year-main-cost"
+                                target="_blank"><i class="fas fa-question-circle info"></a></i></label>
                         <input type="text" class="form-control" id="yearlyMaintenance"
                             placeholder="If unsure, use $1,000">
                     </div>
             </div>
             <div id="the-form2">
-                    <div class="form-group">
-                        <label for="ren-cost">Renovation Costs ($)<a href="/faq#ren-cost" target="_blank"><i class="fas fa-question-circle info"></a></i></label>
-                        <input type="text" class="form-control" id="renovationCosts"
-                            placeholder="If unsure, leave blank">
-                    </div>
+                <div class="form-group">
+                    <label for="ren-cost">Renovation Costs ($)<a href="/faq#ren-cost" target="_blank"><i
+                                class="fas fa-question-circle info"></a></i></label>
+                    <input type="text" class="form-control" id="renovationCosts" placeholder="If unsure, leave blank">
+                </div>
 
-                    <div class="form-group">
-                        <label for="insurance">Yearly Insurance ($)<a href="/faq#insurance" target="_blank"><i class="fas fa-question-circle info"></a></i></label>
-                        <input type="text" class="form-control" id="yearlyInsurance"
-                            placeholder="If unsure, use a number that is 1% of the purchase price.">
-                    </div>
+                <div class="form-group">
+                    <label for="insurance">Yearly Insurance ($)<a href="/faq#insurance" target="_blank"><i
+                                class="fas fa-question-circle info"></a></i></label>
+                    <input type="text" class="form-control" id="yearlyInsurance"
+                        placeholder="If unsure, use a number that is 1% of the purchase price.">
+                </div>
 
-                    <div class="form-group">
-                        <label for="util-mo">Utilities per Month<a href="/faq#utilities" target="_blank"><i class="fas fa-question-circle info"></a></i></label>
-                        <input type="text" class="form-control" id="monthlyUtilities"
-                            placeholder="If tenants will pay all utilities, leave blank">
-                    </div>
+                <div class="form-group">
+                    <label for="util-mo">Utilities per Month<a href="/faq#utilities" target="_blank"><i
+                                class="fas fa-question-circle info"></a></i></label>
+                    <input type="text" class="form-control" id="monthlyUtilities"
+                        placeholder="If tenants will pay all utilities, leave blank">
+                </div>
 
-                    <div class="form-group">
-                        <label for="vac-rate">Vacancy Rate (As a percentage 0-100%)<a href="/faq#vac-rate" target="_blank"><i class="fas fa-question-circle info"></a></i></label>
-                        <input type="number" class="form-control" id="vacancyRate" min="0" max="0"
-                            placeholder="If unsure, use 8.33, which is one month a year">
-                    </div>
+                <div class="form-group">
+                    <label for="vac-rate">Vacancy Rate (As a percentage 0-100%)<a href="/faq#vac-rate"
+                            target="_blank"><i class="fas fa-question-circle info"></a></i></label>
+                    <input type="number" class="form-control" id="vacancyRate" min="0" max="0"
+                        placeholder="If unsure, use 8.33, which is one month a year">
+                </div>
 
-                    <div class="form-group">
-                        <label for="clo-cost">Closing Costs<a href="/faq#clo-cost" target="_blank"><i class="fas fa-question-circle info"></a></i></label>
-                        <input type="text" class="form-control" id="closingCosts"
-                            placeholder="If unsure, use a number that is 3% of the total purchase price">
-                    </div>
+                <div class="form-group">
+                    <label for="clo-cost">Closing Costs<a href="/faq#clo-cost" target="_blank"><i
+                                class="fas fa-question-circle info"></a></i></label>
+                    <input type="text" class="form-control" id="closingCosts"
+                        placeholder="If unsure, use a number that is 3% of the total purchase price">
+                </div>
 
-                    <button type="button" class="form-button" id="submit"> Submit</button>
+                <button type="button" class="form-button" id="submit"> Submit</button>
 
-                    <button type="reset" class="form-button" id="clear"> Clear Fields</button>
+                <button type="reset" class="form-button" id="clear"> Clear Fields</button>
                 </form>
             </div>
         </div>
@@ -121,22 +151,22 @@
 
 
 
-    <div id="zillow-and-map-container">
-        <div id="zillow-api">
-             
-            <span id="zillow-heading-container">
-                <h2 id="zillow-head">Property Search Results</h2>
-                <img id="zillow-logo" src="/img/zillow.gif" alt="Real Estate on Zillow">
-            </span>
-                        
-            <div id="zillow-display"></div>
+        <div id="zillow-and-map-container">
+            <div id="zillow-api">
 
-        </div>
+                <span id="zillow-heading-container">
+                    <h2 id="zillow-head">Property Search Results</h2>
+                    <img id="zillow-logo" src="/img/zillow.gif" alt="Real Estate on Zillow">
+                </span>
+
+                <div id="zillow-display"></div>
+
+            </div>
 
             <div id="map-container">
                 <span id="map-heading-container">
                     <h2 id="map-head">Address Location</h2>
-                    <h5 id ="map-error"></h5>
+                    <h5 id="map-error"></h5>
                 </span>
 
                 <div id="map"></div>

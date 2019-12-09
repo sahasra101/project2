@@ -13,10 +13,31 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
     integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
   <link rel="stylesheet" href="stylesheets/mypropstyles.css">
+  <link rel="stylesheet" href="stylesheets/burger2.css">
   <script src="js/properties.js" type="text/javascript"></script>
 </head>
 
 <body>
+
+  <div class="menu-container">
+    <input type="checkbox" name="toggler" class="toggler">
+    <div class="bun">
+      <div class="burger"></div>
+    </div>
+    <div class="menu">
+      <div>
+        <div>
+          <ul>
+            <li><a href="/members">Home</a></li>
+            <li><a href="/userinput">New Search</a></li>
+            <li><a href="/myproperties">My Properties</a></li>
+            <li><a href="/faq">FAQ</a></li>
+            <li><a href="/logout">Logout</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <header>
     <span id="left-nav">
@@ -73,7 +94,7 @@
         var td2 = $("<td class='investmentHeader'>" + "$" + data[i].initialInvestment + "</td>");
         var td3 = $("<td class='yearOneReturnHeader'>" + "$" + data[i].yearOneReturn + "</td class='yieldHeader'>");
         var td4 = $("<td>" + data[i].yield + "%" + "</td>");
-        
+
         tRow.append(td, td2, td3, td4);
         tBody.append(tRow);
         resultsTable.append(tBody);
@@ -102,7 +123,7 @@
           method: "DELETE",
           url: "/api/property/" + deleteButtonID
         })
-          .then(function(){
+          .then(function () {
             console.log("this works.");
             location.reload();
           });
