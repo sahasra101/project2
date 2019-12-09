@@ -15,7 +15,7 @@ body {
   display: grid;
   grid-template-rows: 1fr .5fr auto;
   grid-template-columns: .28fr auto .28fr;
-  /* grid-gap: 54px 0px; */
+  height: 100vh;
 }
 
 header {
@@ -130,4 +130,8 @@ header {
   border: .5px solid rgb(71, 83, 252);
   margin: 0px 8px 0px 8px;
   outline: none;
+}
+
+.addressHeader {
+  width: 374px;
 }

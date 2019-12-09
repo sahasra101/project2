@@ -109,7 +109,7 @@ header {
   display: grid;
   justify-content: center;
   align-items: center;
-  grid-template-rows: 1fr .3fr .5fr;
+  grid-template-rows: 1fr .4fr .5fr;
   margin-top: 70px;
 }
 
@@ -138,6 +138,15 @@ header {
   text-align: center;
   justify-self: center;
   align-self: start;
+}
+
+.port-link {
+  text-decoration: none;
+  color: rgb(116, 75, 192);
+}
+
+.port-link:hover {
+  text-decoration: underline;
 }
 
 @media screen and (max-width: 940px) {
